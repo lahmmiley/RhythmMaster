@@ -52,7 +52,6 @@ end
 
 function Main()
     Init()
-    PanelManager.New()
 end
 
 function Init()
@@ -79,5 +78,7 @@ function Update()
     if Input.GetKeyDown(KeyCode.E) and Input.GetKey(KeyCode.LeftControl) then
         print("E")
     end
+    TimerHeap.realtimeSinceStartup = Time.realtimeSinceStartup * 1000
     PanelManager.Instance:Update()
+    TimerHeap.Instance:Update()
 end

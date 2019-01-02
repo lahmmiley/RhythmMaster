@@ -27,9 +27,16 @@ function TimerHeap:Add(delay, interval, handler, args1, args2, args3, args4, arg
 end
 
 function TimerHeap:CalcRunTime(timerNode)
+    if timerNode.delay > 0 then
+        timerNode.runTime = TimerHeap.realtimeSinceStartup + timerNode.delay
+    else
+    end
 end
 
 function TimerHeap:Remove()
+end
+
+function TimerHeap:Update()
 end
 
 TimerNode = TimerNode or {}
