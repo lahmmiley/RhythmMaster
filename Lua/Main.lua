@@ -5,7 +5,9 @@ _print = print
 print = function(msg)
     Debug.LogError(msg .. "\n" .. debug.traceback())
 end
-pError = Debug.LogError
+pError = function(str)
+    Debug.LogError(msg .. "\n" .. debug.traceback())
+end
 
 string.Empty = ""
 
@@ -55,6 +57,8 @@ end
 
 function Init()
     Tween.New()
+    GlobalEvent.New()
+    TimerHeap.New()
     AssetLoader.New()
     ModelLoader.New()
     UIEffectLoader.New()

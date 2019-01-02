@@ -65,7 +65,7 @@ local LuaLeanTween = LeanTween
 
 function Tween:__init()
     if Tween.Instance then
-        print("不可以对单例对象重复实例化"..debug.force_traceback())
+        pError("不可以对单例对象重复实例化"..debug.force_traceback())
         return
     end
     Tween.Instance = self
