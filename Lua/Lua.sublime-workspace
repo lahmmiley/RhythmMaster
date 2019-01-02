@@ -1,0 +1,1713 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"load",
+				"loaded"
+			],
+			[
+				"re",
+				"releaseTime"
+			],
+			[
+				"cur",
+				"currentTime"
+			],
+			[
+				"pan",
+				"panel"
+			],
+			[
+				"Asset",
+				"AssetsLoaded"
+			],
+			[
+				"pa",
+				"panelDict"
+			],
+			[
+				"Util",
+				"UtilsTable"
+			],
+			[
+				"pri",
+				"priorClassDict"
+			],
+			[
+				"pr",
+				"priorClassDict"
+			],
+			[
+				"lay",
+				"layerName"
+			],
+			[
+				"Vec",
+				"Vector3One"
+			],
+			[
+				"Page",
+				"SetCurrentPage"
+			],
+			[
+				"off",
+				"offsetY"
+			],
+			[
+				"ra",
+				"rawImageGo"
+			],
+			[
+				"lo",
+				"loaderData"
+			],
+			[
+				"local",
+				"localPosition"
+			],
+			[
+				"car",
+				"cameraGo"
+			],
+			[
+				"came",
+				"cameraGo"
+			],
+			[
+				"cae",
+				"cameraGo"
+			],
+			[
+				"ca",
+				"cameraGo"
+			],
+			[
+				"cl",
+				"clipName"
+			],
+			[
+				"sta",
+				"stand"
+			],
+			[
+				"ani",
+				"animation"
+			],
+			[
+				"Ins",
+				"Instance"
+			],
+			[
+				"rend",
+				"renderer"
+			],
+			[
+				"In",
+				"Instance"
+			],
+			[
+				"Ass",
+				"AssetLoader"
+			],
+			[
+				"_getCon",
+				"_GetContentMinX"
+			],
+			[
+				"ac",
+				"anchoredPosition"
+			],
+			[
+				"_GetCon",
+				"_GetContentMinX"
+			],
+			[
+				"_GetCo",
+				"_GetContentMaxY"
+			],
+			[
+				"GetC",
+				"_GetContentMaxY"
+			],
+			[
+				"padd",
+				"paddingTop"
+			],
+			[
+				"mask",
+				"maskWidth"
+			],
+			[
+				"add",
+				"addStartIndex"
+			],
+			[
+				"_Adda",
+				"_AddAtStartCreateLine"
+			],
+			[
+				"Li",
+				"LimitY"
+			],
+			[
+				"_GetR",
+				"_GetRowIndex"
+			],
+			[
+				"LSIS",
+				"LSIScrollViewTest"
+			],
+			[
+				"IS",
+				"_IsVerticalScroll"
+			],
+			[
+				"co",
+				"column"
+			],
+			[
+				"Is",
+				"_IsVerticalScroll"
+			],
+			[
+				"row",
+				"rowIndex"
+			],
+			[
+				"_GetRo",
+				"_GetStartRowIndex"
+			],
+			[
+				"_get",
+				"_GetRCStartIndex"
+			],
+			[
+				"_GetData",
+				"_GetDataLength"
+			],
+			[
+				"_Pu",
+				"_PushUnUsedItem"
+			],
+			[
+				"_GetRow",
+				"_GetRowStartIndex"
+			],
+			[
+				"y",
+				"yList"
+			],
+			[
+				"item",
+				"Item"
+			],
+			[
+				"itemT",
+				"itemTypeDict"
+			],
+			[
+				"max",
+				"maxY"
+			],
+			[
+				"itemP",
+				"itemPoolListDict"
+			],
+			[
+				"itemTy",
+				"itemType"
+			],
+			[
+				"GetItem",
+				"GetItemWay"
+			],
+			[
+				"_getin",
+				"_GetIndexByY"
+			],
+			[
+				"_GetMask",
+				"_GetMaskTop"
+			],
+			[
+				"ma",
+				"math_random"
+			],
+			[
+				"daa",
+				"dataList"
+			],
+			[
+				"hei",
+				"heightList"
+			],
+			[
+				"im",
+				"itemTypeDict"
+			],
+			[
+				"tem",
+				"templateList"
+			],
+			[
+				"Add",
+				"AddVert"
+			],
+			[
+				"Col",
+				"Color"
+			],
+			[
+				"Inser",
+				"InsertSphereLineVertices"
+			],
+			[
+				"par",
+				"parentIndex"
+			],
+			[
+				"pare",
+				"parentIndex"
+			],
+			[
+				"paren",
+				"parentIndex"
+			],
+			[
+				"pen",
+				"parentStartIndex"
+			],
+			[
+				"fo",
+				"front"
+			],
+			[
+				"rad",
+				"radius"
+			],
+			[
+				"DrawS",
+				"DrawSphere"
+			],
+			[
+				"tra",
+				"triangles"
+			],
+			[
+				"Draw",
+				"DrawTriangle"
+			],
+			[
+				"defa",
+				"defaultNodePoolList"
+			],
+			[
+				"de",
+				"depth"
+			],
+			[
+				"defau",
+				"defaultNodePoolList"
+			],
+			[
+				"node",
+				"nodeData"
+			],
+			[
+				"lt",
+				"ltDescr"
+			],
+			[
+				"lT",
+				"lTree1"
+			],
+			[
+				"nodeda",
+				"nodeDataDict"
+			],
+			[
+				"_GetMas",
+				"_GetMaskBottom"
+			],
+			[
+				"order",
+				"orderList"
+			],
+			[
+				"chil",
+				"childHeight"
+			],
+			[
+				"GetMas",
+				"_GetMaskTop"
+			],
+			[
+				"nodeDa",
+				"nodeData"
+			],
+			[
+				"_Get",
+				"_GetMaskTop"
+			],
+			[
+				"chidl",
+				"childNodeData"
+			],
+			[
+				"or",
+				"orderList"
+			],
+			[
+				"_GetI",
+				"_GetItemWidth"
+			],
+			[
+				"GetNo",
+				"_GetNodeX"
+			],
+			[
+				"siez",
+				"sizeDelta"
+			],
+			[
+				"star",
+				"startIndex"
+			],
+			[
+				"st",
+				"string"
+			],
+			[
+				"nodeData",
+				"nodeDataDict"
+			],
+			[
+				"dep",
+				"depth"
+			],
+			[
+				"temp",
+				"template"
+			],
+			[
+				"templ",
+				"templateDict"
+			],
+			[
+				"Ut",
+				"UtilsBase"
+			],
+			[
+				"data",
+				"dataList"
+			],
+			[
+				"dataT",
+				"dataType"
+			],
+			[
+				"LTr",
+				"LTreeNodeData"
+			],
+			[
+				"datat",
+				"dataTypeDict"
+			],
+			[
+				"start",
+				"startIndex"
+			],
+			[
+				"Get",
+				"_GetItemHeight"
+			],
+			[
+				"child",
+				"childLength"
+			],
+			[
+				"childL",
+				"childLength"
+			],
+			[
+				"chi",
+				"childList"
+			],
+			[
+				"_GetItem",
+				"_GetItemTemplate"
+			],
+			[
+				"itemType",
+				"itemTypeDict"
+			],
+			[
+				"mas",
+				"maskHeight"
+			],
+			[
+				"ga",
+				"gapVertical"
+			],
+			[
+				"on",
+				"onItemSelect"
+			],
+			[
+				"size",
+				"sizeDelta"
+			],
+			[
+				"s",
+				"selectKey"
+			],
+			[
+				"nde",
+				"nodeDataDict"
+			],
+			[
+				"for",
+				"forp\tfor k,v in pairs()"
+			],
+			[
+				"ro",
+				"rootNodeData"
+			],
+			[
+				"GetNO",
+				"_GetNodeX"
+			],
+			[
+				"Comm",
+				"CommonFileConfig"
+			],
+			[
+				"ord",
+				"orderList"
+			],
+			[
+				"rando",
+				"randomValue"
+			],
+			[
+				"ran",
+				"randomValue"
+			],
+			[
+				"sele",
+				"selectGo"
+			],
+			[
+				"se",
+				"selectIndex"
+			],
+			[
+				"Eve",
+				"EventLib"
+			],
+			[
+				"eve",
+				"eventName"
+			],
+			[
+				"Even",
+				"eventNameList"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "Config/PanelConfig.lua",
+			"settings":
+			{
+				"buffer_size": 703,
+				"encoding": "UTF-8",
+				"line_ending": "Unix",
+				"name": "PanelConfig"
+			}
+		},
+		{
+			"file": "Demo/Panel/LoginWindow.lua",
+			"settings":
+			{
+				"buffer_size": 120,
+				"encoding": "UTF-8",
+				"line_ending": "Unix",
+				"name": "LoginWindow"
+			}
+		},
+		{
+			"file": "Util/UtilsUI.lua",
+			"settings":
+			{
+				"buffer_size": 4049,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "Main.lua",
+			"settings":
+			{
+				"buffer_size": 2979,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "Asset/AssetLoader.lua",
+			"settings":
+			{
+				"buffer_size": 299,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "Asset/AssetType.lua",
+			"settings":
+			{
+				"buffer_size": 1031,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "Manager/PanelManager.lua",
+			"settings":
+			{
+				"buffer_size": 1636,
+				"encoding": "UTF-8",
+				"line_ending": "Unix",
+				"name": "PanelManager"
+			}
+		},
+		{
+			"file": "Base/EventLib.lua",
+			"settings":
+			{
+				"buffer_size": 1604,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "LComponent/LPanel.lua",
+			"settings":
+			{
+				"buffer_size": 1479,
+				"encoding": "UTF-8",
+				"line_ending": "Unix",
+				"name": "LPanel ="
+			}
+		},
+		{
+			"file": "Demo/DemoManager.lua",
+			"settings":
+			{
+				"buffer_size": 1869,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "Base/BaseClass.lua",
+			"settings":
+			{
+				"buffer_size": 1671,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "Asset/AssetDefine.lua",
+			"settings":
+			{
+				"buffer_size": 382,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "LComponent/LRadarChart.lua",
+			"settings":
+			{
+				"buffer_size": 478,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		}
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"console":
+	{
+		"height": 0.0,
+		"history":
+		[
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/D/code/unity/LUIDemo/Lua",
+		"/D/code/unity/LUIDemo/Lua/Asset",
+		"/D/code/unity/LUIDemo/Lua/Demo",
+		"/D/code/unity/LUIDemo/Lua/Demo/Panel",
+		"/D/code/unity/LUIDemo/Lua/Manager",
+		"/D/code/unity/LUIDemo/Lua/Util"
+	],
+	"file_history":
+	[
+		"/D/code/unity/LUIDemo/Lua/Util/UtilsUI.lua",
+		"/D/code/unity/LUIDemo/Lua/Asset/ModelLoader.lua",
+		"/D/code/unity/LUIDemo/Lua/Asset/AssetType.lua",
+		"/D/code/unity/LUIDemo/Lua/Asset/ModelLoaderData.lua",
+		"/D/code/unity/LUIDemo/Lua/Main.lua",
+		"/D/code/unity/LUIDemo/Lua/LComponent/LDefine.lua",
+		"/D/code/unity/LUIDemo/Lua/LComponent/LUIModel.lua",
+		"/D/code/unity/LUIDemo/Lua/Test/LLayerTest.lua",
+		"/D/code/unity/LUIDemo/Lua/Asset/AssetLoader.lua",
+		"/D/code/unity/LUIDemo/Lua/Test/LEmojiTextTest.lua",
+		"/D/code/unity/LUIDemo/Lua/Base/BaseClass.lua",
+		"/D/code/unity/LUIDemo/Lua/Base/EventLib.lua",
+		"/D/code/unity/LUIDemo/Lua/Util/Tween.lua",
+		"/D/code/unity/LUIDemo/Lua/Test/LUIModel/LUIModelTest.lua",
+		"/D/code/unity/LUIDemo/Lua/Test/LEmojiTextItem.lua",
+		"/D/code/unity/LUIDemo/Lua/Util/UtilsBase.lua",
+		"/D/code/unity/LUIDemo/Lua/Asset/UIEffectLoader.lua",
+		"/D/code/unity/LUIDemo/Lua/Test/LUIModel/LUIModelTestItem.lua",
+		"/D/code/unity/LUIDemo/Lua/Asset/AssetDefine.lua",
+		"/D/code/unity/LUIDemo/Lua/Test/LRTModel/LRTModelTest.lua",
+		"/D/code/unity/LUIDemo/Unity/Assets/Plugins/Slua_Managed/LuaArray.cs",
+		"/D/code/unity/LUIDemo/Lua/Util/UtilsTable.lua",
+		"/D/code/unity/LUIDemo/Lua/Test/LRTModel/LRTModelTestItem.lua",
+		"/D/code/unity/LUIDemo/Lua/LComponent/LRTModel.lua",
+		"/D/code/unity/LUIDemo/Lua/Test/LRenderTexture/LRenderTextureTestItem.lua",
+		"/D/code/unity/LUIDemo/Lua/Test/LRenderTexture/LRenderTextureTest.lua",
+		"/D/code/unity/LUIDemo/Lua/ConfigHelper/ModelConfigHelper.lua",
+		"/D/code/unity/LUIDemo/Lua/Config/ModelConfig.lua",
+		"/D/code/unity/LUIDemo/Lua/Test/PreviewComposite.lua",
+		"/d/Documents/WXWork/1688850709317594/Cache/File/2018-10/_hotswap.lua",
+		"/D/code/unity/LUIDemo/Lua/Demo/LScrollPageDemo.lua",
+		"/D/code/unity/LUIDemo/Lua/LComponent/LScrollPage.lua",
+		"/D/code/unity/LUIDemo/Lua/Demo/LScrollViewDemoItem1.lua",
+		"/D/code/unity/LUIDemo/Lua/TestMain.lua",
+		"/D/code/unity/LUIDemo/Lua/DemoMain.lua",
+		"/D/code/unity/LUIDemo/Lua/CommonRequire.lua",
+		"/D/code/unity/LUIDemo/Lua/Demo/LListDemo.lua",
+		"/D/code/unity/LUIDemo/Lua/Test/TestDefine.lua",
+		"/D/code/unity/LUIDemo/Lua/Main/DemoMain.lua",
+		"/D/code/unity/LUIDemo/Lua/Main/TestMain.lua",
+		"/D/code/unity/LUIDemo/Lua/Main/CommonRequire.lua",
+		"/D/code/unity/LUIDemo/Lua/LComponent/LRenderTexture.lua",
+		"/D/code/unity/LUIDemo/Lua/Config.lua",
+		"/D/code/unity/LUIDemo/Lua/Test/LRenderTextureTest.lua",
+		"/D/code/unity/LUIDemo/Lua/Test/PreviewmodelComposite.lua",
+		"/D/code/unity/LUIDemo/Lua/Test/LScrollPageTest.lua",
+		"/D/code/unity/LUIDemo/Lua/Test/LListTest.lua",
+		"/D/code/unity/LUIDemo/Lua/LComponent/LScrollView.lua",
+		"/D/code/unity/LUIDemo/Lua/Demo/LSIScrollViewDemo.lua",
+		"/D/code/unity/LUIDemo/Lua/Demo/DemoManager.lua",
+		"/D/code/unity/LUIDemo/Lua/Demo/LDemoItem.lua",
+		"/D/code/unity/LUIDemo/Lua/LComponent/LSIScrollView.lua",
+		"/D/code/unity/LUIDemo/Lua/Demo/LRadarChartDemo.lua",
+		"/D/code/unity/LUIDemo/Lua/Test/LSIScrollViewTest.lua",
+		"/D/code/unity/LUIDemo/Lua/Test/LTestItem.lua",
+		"/D/code/unity/LUIDemo/Lua/Demo/LScrollViewDemo.lua",
+		"/D/code/unity/LUIDemo/Lua/Test/MeshTest.lua",
+		"/D/code/unity/LUIDemo/Lua/LComponent/LMIScrollView.lua",
+		"/D/code/unity/LUIDemo/Lua/Demo/LMIScrollView/LMIScrollViewDemo.lua",
+		"/D/code/unity/LUIDemo/Lua/LComponent/LItem.lua",
+		"/D/code/unity/LUIDemo/Lua/LComponent/LRadarChart.lua",
+		"/D/code/unity/LUIDemo/Lua/LComponent/LTree.lua",
+		"/D/code/unity/LUIDemo/Lua/LComponent/LList.lua",
+		"/D/code/unity/LUIDemo/Lua/Test/LMIScrollView/LMIScrollViewTest.lua",
+		"/D/code/unity/LUIDemo/Lua/Test/LScrollViewTest.lua",
+		"/D/code/unity/LUIDemo/Lua/Test/LMIScrollView/LMIScrollViewTestItem.lua",
+		"/D/code/unity/LUIDemo/Lua/Demo/BaseDemo.lua",
+		"/D/code/unity/LUIDemo/Lua/Demo/LMIScrollView/LMIScrollViewDemoItem1.lua",
+		"/D/code/unity/LUIDemo/Lua/Demo/LMIScrollView/LMIScrollViewDemoItem.lua",
+		"/D/code/unity/LUIDemo/Lua/Demo/LMIScrollView/LMIScrollViewDemoItem2.lua",
+		"/D/code/unity/LUIDemo/Lua/Demo/LTree/LTreeDemo.lua",
+		"/D/code/unity/LUIDemo/Lua/LComponent/LTreeNodeData.lua",
+		"/D/code/unity/LUIDemo/Lua/Test/LMIScrollView/LMIScrollViewTestItem2.lua",
+		"/D/code/unity/LUIDemo/Lua/Test/BaseTest.lua",
+		"/D/code/unity/LUIDemo/Lua/Test/LMIScrollView/LMIScrollViewTestItem1.lua",
+		"/D/code/unity/LUIDemo/Lua/LComponent/LMultiVerticalScrollView.lua",
+		"/D/code/unity/LUIDemo/Lua/Test/ImageMeshTest.lua",
+		"/D/code/unity/LUIDemo/Lua/Demo/LTree/LTreeDemo1.lua",
+		"/D/code/unity/LUIDemo/Lua/Test/LTreeTestItem.lua",
+		"/D/code/unity/LUIDemo/Lua/Test/LTreeTestItem1.lua",
+		"/D/code/unity/LUIDemo/Lua/Demo/LScrollViewDemo1.lua",
+		"/D/code/unity/LUIDemo/Lua/Demo/LTree/LTreeNodeDataDemo2_2.lua",
+		"/D/code/unity/LUIDemo/Lua/Demo/LTree/LTreeNodeDemo.lua",
+		"/D/code/unity/LUIDemo/Lua/Demo/LTree/LTreeNodeDemo_1.lua",
+		"/D/code/unity/LUIDemo/Lua/LComponent/LTreeNode.lua",
+		"/D/code/unity/LUIDemo/Lua/Lua.sublime-project",
+		"/D/code/unity/LUIDemo/Lua/Demo/LTree/LTreeNodeDemo1.lua",
+		"/D/code/unity/LUIDemo/Lua/Demo/LTree/LTreeDemo2.lua",
+		"/D/code/unity/LUIDemo/Lua/Demo/LTree/LTreeNodeDemo2_2.lua",
+		"/D/code/unity/LUIDemo/Lua/Test/LTreeTest.lua",
+		"/D/code/unity/LUIDemo/Lua/Demo/LTree/LTreeNodeDemo2_1.lua",
+		"/D/code/unity/LUIDemo/Lua/Demo/LTree/LTreeNodeDataDemo1.lua",
+		"/D/code/unity/LUIDemo/Lua/BaseRequire.lua",
+		"/D/code/unity/LUIDemo/Lua/test.lua",
+		"/D/code/unity/LUIDemo/Lua/Util/EventMgr.lua",
+		"/D/code/unity/LUIDemo/Lua/UIComponent/ListView.lua",
+		"/D/code/unity/Lua/LComponent/LScrollPage.lua",
+		"/D/code/unity/Lua/Util/EventMgr.lua",
+		"/D/code/unity/Lua/LComponent/LScrollView.lua",
+		"/D/code/unity/Lua/Test/LScrollPageTest.lua",
+		"/D/code/unity/Lua/test.lua",
+		"/D/code/unity/Lua/LComponent/LTreeNode.lua",
+		"/D/code/unity/lua/LComponent/LTreeNode.lua",
+		"/D/code/unity/Lua/LComponent/LTree.lua"
+	],
+	"find":
+	{
+		"height": 40.0
+	},
+	"find_in_files":
+	{
+		"height": 104.0,
+		"where_history":
+		[
+			"D:\\code\\unity\\LUIDemo\\Lua",
+			""
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"Remove",
+			"RemoveAll",
+			"Release",
+			"lastWindow",
+			"currentWindow",
+			"AssetLoader",
+			"config",
+			"VEHICLE_PREFAB_PATH",
+			"AssetDefine",
+			"ModelConfig",
+			"iconId",
+			"AssetDefine.ANIMATION_PATH",
+			"AssetDefine.SKIN_PATH",
+			"AssetDefine.PREFAB_PATH",
+			"UIEffectLoader",
+			"ModelLoader",
+			"LLayerTest",
+			"LUIModelTest",
+			"classPath",
+			"array",
+			"tb",
+			"priorClassDict",
+			"className",
+			"PriorClassArray",
+			"priorClassDict",
+			"UtilsBase",
+			"priorPathList",
+			"modelTrans",
+			"uiModel",
+			"LRTModel",
+			"LRTModelTestItem",
+			"LRTModelTest",
+			"LRenderTextureTestItem",
+			"LRenderTextureTest",
+			"LUIModel",
+			"rawImageTrans",
+			"anchoredPosition",
+			"height",
+			"config",
+			"GetModelStandHeight",
+			"uiScals",
+			"rotation",
+			"position",
+			"offsetPosition",
+			"LUIModel",
+			"ModelConfigHelper.GetModelStandHeight",
+			"offsetPosition",
+			"scale",
+			"SetCurrentPage",
+			"initPage",
+			"priorPathList",
+			"CommonReq",
+			"Class\\(.+\\)",
+			"height",
+			"rawImageGo",
+			"cameraGo",
+			"rotation",
+			"childTrans",
+			"rawImage",
+			"InitRenderTexture",
+			"cameraTrans",
+			"offsetPosition",
+			"data",
+			"cameraGo",
+			"cameraTrans",
+			"cameraGo",
+			"cameraTrans",
+			"data",
+			"Data",
+			"data",
+			"loaderData",
+			"renderTexture",
+			"camera",
+			"Camera",
+			"camera",
+			"renderTexture",
+			"cameraGoTemplate",
+			"Camera",
+			"rootTrans",
+			"UtilsUI.CalculateSize",
+			"GetComponent",
+			"result",
+			"stand",
+			"transform",
+			"renderer",
+			"AssetLoader",
+			"ModelLoader",
+			"LRenderTextureText",
+			"scrollView",
+			"reachBottomFire",
+			"LTestItem",
+			"LSIScrollViewTest",
+			"LScrollPageDemo",
+			"print",
+			"Button3_1",
+			"_AdjustContentPosition",
+			"_FireReachBottomEvent",
+			"print",
+			"_LimitY",
+			"height",
+			"width",
+			"_LimitY",
+			"_AdjustContentPosition",
+			"_GetStartIndex",
+			"ndex()\n    if self:_IsVerticalScroll() then\n        local rowIndex = self:",
+			"_GetStartRowIndex",
+			"_GetMaskTop",
+			"_GetRowIndex",
+			"_GetStartRowIndex",
+			"_GetStartIndex",
+			"_Update",
+			"print",
+			"_GetRowIndex",
+			"_GetStartRowIndex",
+			"_GetStartIndex",
+			"print",
+			"_GetStartIndex",
+			"_GetRowIndex",
+			"_GetMaskTop",
+			"_GetStartRowIndex",
+			"_GetStartIndex",
+			"_FireReachBottomEvent",
+			"sizeDelta",
+			"SizeDelta",
+			"sizeDelta",
+			"mask",
+			"_FireReachBottomEvent",
+			"Fire"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			"AssetDefine.VEHICLE_ANIMATION_PATH",
+			"AssetDefine.VEHICLE_SKIN_PATH",
+			"AssetDefine.VEHICLE_PREFAB_PATH",
+			"    "
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 7,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "Config/PanelConfig.lua",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 703,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								687,
+								687
+							]
+						],
+						"settings":
+						{
+							"auto_name": "PanelConfig",
+							"syntax": "Packages/Lua/Lua.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 162.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 4,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "Demo/Panel/LoginWindow.lua",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 120,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								120,
+								120
+							]
+						],
+						"settings":
+						{
+							"auto_name": "LoginWindow",
+							"syntax": "Packages/Lua/Lua.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 6,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "Util/UtilsUI.lua",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 4049,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Lua/Lua.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 1242.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 7,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "Main.lua",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2979,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								904,
+								904
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Lua/Lua.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 378.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "Asset/AssetLoader.lua",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 299,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								184,
+								76
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Lua/Lua.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 11,
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "Asset/AssetType.lua",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1031,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								516,
+								516
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Lua/Lua.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 5,
+					"type": "text"
+				},
+				{
+					"buffer": 6,
+					"file": "Manager/PanelManager.lua",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1636,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								470,
+								470
+							]
+						],
+						"settings":
+						{
+							"auto_name": "PanelManager",
+							"syntax": "Packages/Lua/Lua.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 7,
+					"file": "Base/EventLib.lua",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1604,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1516,
+								1516
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Lua/Lua.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 918.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				}
+			]
+		},
+		{
+			"selected": 0,
+			"sheets":
+			[
+				{
+					"buffer": 8,
+					"file": "LComponent/LPanel.lua",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1479,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1477,
+								1477
+							]
+						],
+						"settings":
+						{
+							"auto_name": "LPanel =",
+							"syntax": "Packages/Lua/Lua.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 1122.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				},
+				{
+					"buffer": 9,
+					"file": "Demo/DemoManager.lua",
+					"semi_transient": true,
+					"settings":
+					{
+						"buffer_size": 1869,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								657,
+								657
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Lua/Lua.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 108.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 8,
+					"type": "text"
+				},
+				{
+					"buffer": 10,
+					"file": "Base/BaseClass.lua",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1671,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								768,
+								775
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Lua/Lua.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 358.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 9,
+					"type": "text"
+				},
+				{
+					"buffer": 11,
+					"file": "Asset/AssetDefine.lua",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 382,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								212,
+								212
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Lua/Lua.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 12,
+					"type": "text"
+				},
+				{
+					"buffer": 12,
+					"file": "LComponent/LRadarChart.lua",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 478,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								61,
+								61
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Lua/Lua.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 10,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 28.0
+	},
+	"input":
+	{
+		"height": 40.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			],
+			[
+				0,
+				1,
+				1,
+				2
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			0.5,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "",
+	"project": "Lua.sublime-project",
+	"replace":
+	{
+		"height": 52.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"utilsui",
+				"Util\\UtilsUI.lua"
+			],
+			[
+				"ev",
+				"Base\\EventLib.lua"
+			],
+			[
+				"basl",
+				"Base\\BaseClass.lua"
+			],
+			[
+				"twee",
+				"Util\\Tween.lua"
+			],
+			[
+				"LEmojiTextItem",
+				"Test\\LEmojiTextItem.lua"
+			],
+			[
+				"LE",
+				"Test\\LEmojiTextItem.lua"
+			],
+			[
+				"asset",
+				"Asset\\AssetLoader.lua"
+			],
+			[
+				"utls",
+				"Util\\UtilsBase.lua"
+			],
+			[
+				"LUIMo",
+				"LComponent\\LUIModel.lua"
+			],
+			[
+				"luimo",
+				"LComponent\\LUIModel.lua"
+			],
+			[
+				"main",
+				"Main.lua"
+			],
+			[
+				"bas",
+				"Base\\BaseClass.lua"
+			],
+			[
+				"utilsb",
+				"Util\\UtilsBase.lua"
+			],
+			[
+				"previ",
+				"Test\\PreviewComposite.lua"
+			],
+			[
+				"Lui",
+				"LComponent\\LUIModel.lua"
+			],
+			[
+				"modelload",
+				"Asset\\ModelLoader.lua"
+			],
+			[
+				"Lscro",
+				"LComponent\\LScrollPage.lua"
+			],
+			[
+				"LScrollpage",
+				"Demo\\LScrollPageDemo.lua"
+			],
+			[
+				"LScrollviewde",
+				"Demo\\LScrollViewDemoItem1.lua"
+			],
+			[
+				"LlIstde",
+				"Demo\\LListDemo.lua"
+			],
+			[
+				"testde",
+				"Test\\TestDefine.lua"
+			],
+			[
+				"uu",
+				"Util\\UtilsUI.lua"
+			],
+			[
+				"util",
+				"Util\\UtilsBase.lua"
+			],
+			[
+				"prev",
+				"Test\\PreviewComposite.lua"
+			],
+			[
+				"modello",
+				"Asset\\ModelLoader.lua"
+			],
+			[
+				"LSISc",
+				"Demo\\LSIScrollViewDemo.lua"
+			],
+			[
+				"Ltest",
+				"Test\\LTestItem.lua"
+			],
+			[
+				"scrollview",
+				"LComponent\\LScrollView.lua"
+			],
+			[
+				"LDemoItem",
+				"Demo\\LDemoItem.lua"
+			],
+			[
+				"LItem",
+				"LComponent\\LItem.lua"
+			],
+			[
+				"basec",
+				"Base\\BaseClass.lua"
+			],
+			[
+				"Lscrollvi",
+				"LComponent\\LScrollView.lua"
+			],
+			[
+				"LLi",
+				"LComponent\\LList.lua"
+			],
+			[
+				"lsc",
+				"LComponent\\LScrollView.lua"
+			],
+			[
+				"scrollpage",
+				"LComponent\\LScrollPage.lua"
+			],
+			[
+				"LScro",
+				"LComponent\\LScrollView.lua"
+			],
+			[
+				"LTestItem",
+				"Test\\LTestItem.lua"
+			],
+			[
+				"lmi",
+				"LComponent\\LMIScrollView.lua"
+			],
+			[
+				"scrollvi",
+				"LComponent\\LScrollView.lua"
+			],
+			[
+				"NS",
+				"LComponent\\NScrollView.lua"
+			],
+			[
+				"LMIScrollViewDemoItem1",
+				"Demo\\LMIScrollView\\LMIScrollViewDemoItem1.lua"
+			],
+			[
+				"basede",
+				"Demo\\BaseDemo.lua"
+			],
+			[
+				"u",
+				"Util\\UtilsBase.lua"
+			],
+			[
+				"base",
+				"Base\\BaseClass.lua"
+			],
+			[
+				"Litem",
+				"LComponent\\LItem.lua"
+			],
+			[
+				"Lite",
+				"LComponent\\LItem.lua"
+			],
+			[
+				"Lis",
+				"LComponent\\LList.lua"
+			],
+			[
+				"LTr",
+				"LComponent\\LTree.lua"
+			],
+			[
+				"LMu",
+				"LComponent\\LMultiVerticalScrollView.lua"
+			],
+			[
+				"LScroo",
+				"Demo\\LScrollPageDemo.lua"
+			],
+			[
+				"scrollv",
+				"LComponent\\LScrollView.lua"
+			],
+			[
+				"ltreedemo",
+				"Demo\\LTree\\LTreeDemo1.lua"
+			],
+			[
+				"ltree",
+				"LComponent\\LTree.lua"
+			],
+			[
+				"ut",
+				"Util\\UtilsUI.lua"
+			],
+			[
+				"notdeda",
+				"LComponent\\LTreeNodeData.lua"
+			],
+			[
+				"lnode",
+				"LComponent\\LTreeNodeData.lua"
+			],
+			[
+				"ltreeno",
+				"LComponent\\LTreeNodeData.lua"
+			],
+			[
+				"ltreenodemo",
+				"Demo\\LTree\\LTreeNodeDemo2_2.lua"
+			],
+			[
+				"nodedata",
+				"LComponent\\LTreeNodeData.lua"
+			],
+			[
+				"ltre",
+				"LComponent\\LTreeNodeData.lua"
+			],
+			[
+				"ltreenode",
+				"LComponent\\LTreeNodeData.lua"
+			],
+			[
+				"lscroll",
+				"LComponent\\LScrollView.lua"
+			],
+			[
+				"lscro",
+				"LComponent\\LScrollView.lua"
+			],
+			[
+				"lscrollvi",
+				"LComponent\\LScrollView.lua"
+			],
+			[
+				"utilsba",
+				"Util\\UtilsBase.lua"
+			],
+			[
+				"litem",
+				"LComponent\\LItem.lua"
+			],
+			[
+				"demomain",
+				"DemoMain.lua"
+			],
+			[
+				"litm",
+				"LComponent\\LItem.lua"
+			],
+			[
+				"lscrollview",
+				"LComponent\\LScrollView.lua"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 236.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}
