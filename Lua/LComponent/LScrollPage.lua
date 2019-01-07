@@ -23,7 +23,7 @@ function LScrollPage:__init(transform, itemType, row, column, direction)
     self.itemDict = {}
     self.itemPoolList = {}
     self.currentPage = 1
-    self.currentPageDynamic = self.currentPage
+    self.dynamicCurrentPage = self.currentPage
     self.ItemSelectEvent = LocalEvent.New()
 end
 
@@ -103,6 +103,7 @@ function LScrollPage:_OnValueChanged()
     local dynamicCurrentPage = self:_GetDynamicCurrentPage()
     if self.dynamicCurrentPage ~= dynamicCurrentPage then
         self.dynamicCurrentPage = dynamicCurrentPage
+        self.currentPage = self.dynamicCurrentPage
         self:_Update()
     end
 end

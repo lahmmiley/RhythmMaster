@@ -54,6 +54,9 @@ function UtilsBase.CancelTween(object, name)
 end
 
 function UtilsBase.CancelTweenIdList(object, name)
+    if type(name) ~= "string" then
+        pError("CancelTween 传入参数不为字符串")
+    end
     if object[name] then
         for _, tweenId in _pairs(object[name]) do
             Tween.Instance:Cancel(tweenId)

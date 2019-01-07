@@ -9,6 +9,6 @@ function AssetLoader:__init()
 end
 
 function AssetLoader:Load(path)
-    local result = Resources.Load(path)--, GameObject)
+    local result = Resources.Load(path)
     return result
 end

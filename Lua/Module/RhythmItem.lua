@@ -1,0 +1,1 @@
+RhythmItem = RhythmItem or BaseClass()

@@ -78,7 +78,9 @@ function Update()
     if Input.GetKeyDown(KeyCode.E) and Input.GetKey(KeyCode.LeftControl) then
         print("E")
     end
-    TimerHeap.realtimeSinceStartup = Time.realtimeSinceStartup * 1000
-    PanelManager.Instance:Update()
-    TimerHeap.Instance:Update()
+    local deltaTime = Time.deltaTime
+    LTimer.realtimeSinceStartup = Time.realtimeSinceStartup * 1000
+    print(LTimer.realtimeSinceStartup)
+    LTimer.Instance:Update(deltaTime)
+    GlobalEvent.Instance:Fire(EventId.frameUpdate, deltaTime)
 end

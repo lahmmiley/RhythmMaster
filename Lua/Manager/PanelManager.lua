@@ -7,6 +7,9 @@ function PanelManager:__init()
     end
     PanelManager.Instance = self
 
+    self.update = function() self:Update() end
+    self:AddListener()
+
     --界面始终只显示一个window，
     --如果当前打开一个window，再开另一个window会隐藏当前window
     --关闭当前window，假如存在lastWindow，会重新打开window
@@ -16,6 +19,7 @@ function PanelManager:__init()
 end
 
 function PanelManager:__release()
+    self:RemoveListener()
 end
 
 function PanelManager:Update()
@@ -64,4 +68,12 @@ function PanelManager:Hide(id)
         self.currentWindow = self.lastWindow
         self.lastWindow = nil
     end
+end
+
+function PanelManager:AddListener()
+    GlobalEvent.frameUpdate:Add(self.update)
+end
+
+function PanelManager:RemoveListener()
+    GlobalEvent.frameUpdate:Remove(self.update)
 end

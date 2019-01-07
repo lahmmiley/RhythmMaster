@@ -37,10 +37,12 @@ end
 
 
 function LPanel:AssetsLoaded(gameObject)
+    self.gameObject = gameObject
     self.state = LPanel.State.loaded
     --后面改为异步加载
     local gameObject = self.gameObject
     if self.active then
+        self:InitPanel(gameObject)
         gameObject:SetActive(true)
         self:AddListener()
         self:OnShow()
