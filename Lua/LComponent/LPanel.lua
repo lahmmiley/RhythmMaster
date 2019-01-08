@@ -70,3 +70,23 @@ end
 
 function LPanel:RemoveListener()
 end
+
+function LPanel:ReleaseField(name)
+    UtilsBase.ReleaseField(self, name)
+end
+
+function LPanel:ReleaseTable(name)
+    UtilsBase.ReleaseTable(self, name)
+end
+
+function LPanel:DestroyGameObject(name)
+    UtilsBase.DestroyGameObject(self, name)
+end
+
+function UtilsBase.CancelTween(name)
+    UtilsBase.CancelTween(self, name)
+end
+
+function UtilsBase.CancelTweenIdList(name)
+    UtilsBase.CancelTweenIdList(self, name)
+end

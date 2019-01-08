@@ -55,7 +55,6 @@ function TimerList:Add(timerNode)
 end
 
 LTimer = LTimer or BaseClass()
-
 function LTimer:__init()
     if LTimer.Instance then
         pError("不可以对单例对象重复实例化")

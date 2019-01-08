@@ -5,18 +5,28 @@ ClassPool = ClassPool or BaseClass()
 
 function ClassPool:__init(class)
     self.class = class
-    self.poolList = {}
+    self.classList = {}
+end
+
+function ClassPool:__release()
+    self.class = nil
+    self.classList = nil
 end
 
 function ClassPool:Get(...)
-    if #self.poolList > 0 then
-        local item = _table_remove(self.poolList)
-        item:Reset(...)
+    if #self.classList > 0 then
+        local item = _table_remove(self.classList)
+        if item.Reset then
+            item:Reset(...)
+        end
         return item
     end
     return self.class.New(...)
 end
 
 function ClassPool:PushBack(data)
-    _table_insert(self.poolList, data)
+    if data.PushBack then
+        data:PushBack()
+    end
+    _table_insert(self.classPoolList, data)
 end

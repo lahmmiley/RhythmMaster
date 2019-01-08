@@ -4,6 +4,22 @@
 		"selected_items":
 		[
 			[
+				"Remove",
+				"RemoveListener"
+			],
+			[
+				"no",
+				"nodePool"
+			],
+			[
+				"list",
+				"listPool"
+			],
+			[
+				"_tabl",
+				"_table_insert"
+			],
+			[
 				"slo",
 				"slotDict"
 			],
@@ -498,54 +514,45 @@
 			[
 				"size",
 				"sizeDelta"
-			],
-			[
-				"s",
-				"selectKey"
-			],
-			[
-				"nde",
-				"nodeDataDict"
-			],
-			[
-				"for",
-				"forp\tfor k,v in pairs()"
-			],
-			[
-				"ro",
-				"rootNodeData"
 			]
 		]
 	},
 	"buffers":
 	[
 		{
-			"file": "Base/LTimer.lua",
+			"file": "Base/GlobalEvent.lua",
 			"settings":
 			{
-				"buffer_size": 3487,
-				"encoding": "UTF-8",
-				"line_ending": "Unix",
-				"name": "TimerHeap = Timer"
-			}
-		},
-		{
-			"file": "LComponent/LScrollPage.lua",
-			"settings":
-			{
-				"buffer_size": 11223,
+				"buffer_size": 168,
 				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"contents": "Searching 38 files for \"LScrollPage\"\n\nD:\\code\\unity\\RhythmMaster\\Lua\\LComponent\\LScrollPage.lua:\n    1: LScrollPage = LScrollPage or BaseClass()\n    2  \n    3: function LScrollPage:__init(transform, itemType, row, column, direction)\n    4      self.itemType = itemType\n    5      self.row = row or 1\n    .\n   28  end\n   29  \n   30: function LScrollPage:_InitMask(transform)\n   31      self.mask = transform:GetComponent(Mask)\n   32      self.maskImage = UtilsUI.GetImage(transform)\n   ..\n   34  end\n   35  \n   36: function LScrollPage:_CalcMaskSize()\n   37      local maskWidth = self.paddingLeft + self.paddingRight + self.column * self.itemWidth + (self.column - 1) * self.gapHorizontal\n   38      local maskHeight = self.paddingTop + self.paddingBottom + self.row * self.itemHeight + (self.row - 1) * self.gapVertical\n   ..\n   42  end\n   43  \n   44: function LScrollPage:_InitTemplateItem()\n   45      local template = self.contentTrans:Find(LDefine.ITEM_NAME).gameObject\n   46      self.template = template\n   ..\n   50  end\n   51  \n   52: function LScrollPage:_InitScrollRect(transform)\n   53      local scrollRect = transform:GetComponent(ScrollRect)\n   54      self.scrollRect = scrollRect\n   ..\n   62  end\n   63  \n   64: function LScrollPage:_InitDragEvent(transform)\n   65      local dragEvent = transform.gameObject:AddComponent(DragEvent)\n   66      dragEvent.onBeginDrag:AddListener(function(value) self:_OnBeginDragEvent() end)\n   ..\n   68  end\n   69  \n   70: function LScrollPage:__release()\n   71      UtilsBase.ReleaseField(self, \"ItemSelectEvent\")\n   72      UtilsBase.ReleaseTable(self, \"eventNameList\")\n   ..\n   76  end\n   77  \n   78: function LScrollPage:_OnBeginDragEvent()\n   79      UtilsBase.CancelTween(self, \"tweenId\")\n   80      self.beginDragPosition = self.contentTrans.anchoredPosition\n   81  end\n   82  \n   83: function LScrollPage:_OnEndDragEvent()\n   84      local endDragPosition = self.contentTrans.anchoredPosition\n   85      local page\n   ..\n  100  end\n  101  \n  102: function LScrollPage:_OnValueChanged()\n  103      local dynamicCurrentPage = self:_GetDynamicCurrentPage()\n  104      if self.dynamicCurrentPage ~= dynamicCurrentPage then\n  ...\n  109  \n  110  -- public function\n  111: function LScrollPage:SetGap(gapHorizontal, gapVertical)\n  112      self.gapHorizontal = gapHorizontal or 0\n  113      self.gapVertical = gapVertical or 0\n  ...\n  115  end\n  116  \n  117: function LScrollPage:SetPadding(paddingLeft, paddingRight, paddingTop, paddingBottom)\n  118      self.paddingLeft = paddingLeft or 0\n  119      self.paddingRight = paddingRight or 0\n  ...\n  123  end\n  124  \n  125: function LScrollPage:AddItemEvent(eventName)\n  126      if self.eventNameList == nil then\n  127          self.eventNameList = {}\n  ...\n  131  end\n  132  \n  133: function LScrollPage:InitCurrentPage(page)\n  134      self.initPage = page\n  135  end\n  136  \n  137: function LScrollPage:SetCurrentPage(page, tween)\n  138      local page = Mathf.Clamp(page, 1, self.totalPage)\n  139      self.currentPage = page\n  ...\n  151  end\n  152  \n  153: function LScrollPage:GetTotalPage()\n  154      return self.totalPage\n  155  end\n  156  \n  157: function LScrollPage:SetData(dataList, commonData)\n  158      self.dataList = dataList\n  159      self.commonData = commonData\n  ...\n  197  \n  198  -- private function\n  199: function LScrollPage:_TweenMove(page)\n  200      if self:_PageHorizontalLayout() then\n  201          self.tweenId = Tween.Instance:MoveLocalX(self.contentTrans.gameObject, self:_GetTargetPosition(page).x, 0.3).id\n  ...\n  205  end\n  206  \n  207: function LScrollPage:_CalculateSize()\n  208      if self:_PageHorizontalLayout() then\n  209          self.contentTrans.sizeDelta = Vector2(self.totalPage * self.maskWidth, self.maskHeight)\n  ...\n  213  end\n  214  \n  215: function LScrollPage:_GetTargetPosition(page)\n  216      if self:_PageHorizontalLayout() then\n  217          return Vector2(-(page - 1) * self.maskWidth, 0)\n  ...\n  221  end\n  222  \n  223: function LScrollPage:_HideOutRangeList(startIndex, endIndex)\n  224      for index, item in pairs(self.itemDict) do\n  225          if index < startIndex or endIndex < index then\n  ...\n  231  end\n  232  \n  233: function LScrollPage:_GetIndexRange(currentPage)\n  234      local startIndex = (currentPage - 2) * self.perPageCount + 1\n  235      local endIndex = (currentPage + 1) * self.perPageCount\n  ...\n  237  end\n  238  \n  239: function LScrollPage:_Layout()\n  240      for index, item in pairs(self.itemDict) do\n  241          local page = math.floor((index - 1) / self.perPageCount)\n  ...\n  261  end\n  262  \n  263: function LScrollPage:_EmptyCacheItemList()\n  264      for index, item in pairs(self.itemDict) do\n  265          item:SetActive(false)\n  ...\n  268  end\n  269  \n  270: function LScrollPage:_Update()\n  271      local startIndex, endIndex = self:_GetIndexRange(self.dynamicCurrentPage)\n  272      self:_HideOutRangeList(startIndex, endIndex)\n  ...\n  282  end\n  283  \n  284: function LScrollPage:_GetDynamicCurrentPage()\n  285      local page\n  286      if self:_PageHorizontalLayout() then\n  ...\n  292  end\n  293  \n  294: function LScrollPage:_GetItem(index)\n  295      if self.itemDict[index] then\n  296          return self.itemDict[index], LDefine.GetItemWay.exist\n  ...\n  314  end\n  315  \n  316: function LScrollPage:_ItemHorizontalLayout()\n  317      return self.itemLayoutDirection == LDefine.Direction.horizontal\n  318  end\n  319  \n  320: function LScrollPage:_PageHorizontalLayout()\n  321      return self.pageLayoutDirection == LDefine.Direction.horizontal\n  322  end\n\nD:\\code\\unity\\RhythmMaster\\Lua\\Lua.sublime-workspace:\n  621  \t\t\"/D/code/unity/RhythmMaster/Lua/LComponent/LItem.lua\",\n  622  \t\t\"/D/code/unity/RhythmMaster/Lua/LComponent/LList.lua\",\n  623: \t\t\"/D/code/unity/RhythmMaster/Lua/LComponent/LScrollPage.lua\",\n  624  \t\t\"/D/code/unity/RhythmMaster/Lua/LComponent/LScrollView.lua\",\n  625  \t\t\"/D/code/unity/RhythmMaster/Lua/LComponent/LSIScrollView.lua\",\n  ...\n  669  \t\t\"/D/code/unity/LUIDemo/Lua/Test/PreviewComposite.lua\",\n  670  \t\t\"/d/Documents/WXWork/1688850709317594/Cache/File/2018-10/_hotswap.lua\",\n  671: \t\t\"/D/code/unity/LUIDemo/Lua/Demo/LScrollPageDemo.lua\",\n  672: \t\t\"/D/code/unity/LUIDemo/Lua/LComponent/LScrollPage.lua\",\n  673  \t\t\"/D/code/unity/LUIDemo/Lua/Demo/LScrollViewDemoItem1.lua\",\n  674  \t\t\"/D/code/unity/LUIDemo/Lua/TestMain.lua\",\n  ...\n  684  \t\t\"/D/code/unity/LUIDemo/Lua/Test/LRenderTextureTest.lua\",\n  685  \t\t\"/D/code/unity/LUIDemo/Lua/Test/PreviewmodelComposite.lua\",\n  686: \t\t\"/D/code/unity/LUIDemo/Lua/Test/LScrollPageTest.lua\",\n  687  \t\t\"/D/code/unity/LUIDemo/Lua/Test/LListTest.lua\",\n  688  \t\t\"/D/code/unity/LUIDemo/Lua/LComponent/LScrollView.lua\",\n  ...\n  735  \t\t\"/D/code/unity/LUIDemo/Lua/Util/EventMgr.lua\",\n  736  \t\t\"/D/code/unity/LUIDemo/Lua/UIComponent/ListView.lua\",\n  737: \t\t\"/D/code/unity/Lua/LComponent/LScrollPage.lua\",\n  738  \t\t\"/D/code/unity/Lua/Util/EventMgr.lua\",\n  739  \t\t\"/D/code/unity/Lua/LComponent/LScrollView.lua\",\n  740: \t\t\"/D/code/unity/Lua/Test/LScrollPageTest.lua\",\n  741  \t\t\"/D/code/unity/Lua/test.lua\"\n  742  \t],\n  ...\n 1205  \t\t\t[\n 1206  \t\t\t\t\"Lscro\",\n 1207: \t\t\t\t\"LComponent\\\\LScrollPage.lua\"\n 1208  \t\t\t],\n 1209  \t\t\t[\n 1210: \t\t\t\t\"LScrollpage\",\n 1211: \t\t\t\t\"Demo\\\\LScrollPageDemo.lua\"\n 1212  \t\t\t],\n 1213  \t\t\t[\n ....\n 1277  \t\t\t[\n 1278  \t\t\t\t\"scrollpage\",\n 1279: \t\t\t\t\"LComponent\\\\LScrollPage.lua\"\n 1280  \t\t\t],\n 1281  \t\t\t[\n ....\n 1337  \t\t\t[\n 1338  \t\t\t\t\"LScroo\",\n 1339: \t\t\t\t\"Demo\\\\LScrollPageDemo.lua\"\n 1340  \t\t\t],\n 1341  \t\t\t[\n\n42 matches across 2 files\n",
+			"file": "Module/RhythmWindow.lua",
 			"settings":
 			{
-				"buffer_size": 7520,
-				"line_ending": "Unix",
-				"name": "Find Results",
-				"scratch": true
+				"buffer_size": 889,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "Base/LTimer.lua",
+			"settings":
+			{
+				"buffer_size": 3626,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "Module/RhythmDefine.lua",
+			"settings":
+			{
+				"buffer_size": 59,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
 			}
 		},
 		{
@@ -558,19 +565,19 @@
 			}
 		},
 		{
-			"file": "Base/LocalEvent.lua",
+			"file": "LComponent/LScrollPage.lua",
 			"settings":
 			{
-				"buffer_size": 1288,
+				"buffer_size": 11274,
 				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "Module/RhythmWindow.lua",
+			"file": "LComponent/LPanel.lua",
 			"settings":
 			{
-				"buffer_size": 124,
+				"buffer_size": 1547,
 				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			}
@@ -617,29 +624,33 @@
 	],
 	"file_history":
 	[
-		"/D/code/unity/RhythmMaster/Lua/Base/LocalEvent.lua",
-		"/D/code/unity/RhythmMaster/Lua/Base/GlobalEvent.lua",
-		"/D/code/unity/RhythmMaster/Lua/Pool/ClassPool.lua",
 		"/D/code/unity/RhythmMaster/Lua/Manager/PanelManager.lua",
-		"/D/code/unity/RhythmMaster/Lua/LComponent/LPanel.lua",
+		"/D/code/unity/RhythmMaster/Lua/Module/RhythmItem.lua",
+		"/D/code/unity/RhythmMaster/Lua/Base/BaseClass.lua",
+		"/D/code/unity/RhythmMaster/Lua/Base/LTimer.lua",
+		"/D/code/unity/RhythmMaster/Lua/Base/LocalEvent.lua",
+		"/D/code/unity/RhythmMaster/Lua/Asset/AssetLoader.lua",
 		"/D/code/unity/RhythmMaster/Lua/Base/EventId.lua",
+		"/D/code/unity/RhythmMaster/Lua/LComponent/LScrollPage.lua",
+		"/D/code/unity/RhythmMaster/Lua/Pool/ClassPool.lua",
+		"/D/code/unity/RhythmMaster/Lua/Util/UtilsBase.lua",
+		"/D/code/unity/RhythmMaster/Lua/LComponent/LDefine.lua",
+		"/D/code/unity/RhythmMaster/Lua/Base/GlobalEvent.lua",
+		"/D/code/unity/RhythmMaster/Lua/LComponent/LPanel.lua",
 		"/D/code/unity/RhythmMaster/Lua/LComponent/LMIScrollView.lua",
 		"/D/code/unity/RhythmMaster/Lua/Util/Tween.lua",
 		"/D/code/unity/RhythmMaster/Lua/Lua.sublime-workspace",
 		"/D/code/unity/RhythmMaster/Lua/LComponent/LItem.lua",
 		"/D/code/unity/RhythmMaster/Lua/LComponent/LList.lua",
-		"/D/code/unity/RhythmMaster/Lua/LComponent/LScrollPage.lua",
 		"/D/code/unity/RhythmMaster/Lua/LComponent/LScrollView.lua",
 		"/D/code/unity/RhythmMaster/Lua/LComponent/LSIScrollView.lua",
 		"/D/code/unity/RhythmMaster/Lua/LComponent/LTree.lua",
 		"/D/code/unity/RhythmMaster/Lua/LComponent/LTreeNode.lua",
 		"/D/code/unity/RhythmMaster/Lua/Base/EventName.lua",
-		"/D/code/unity/RhythmMaster/Lua/Base/BaseClass.lua",
 		"/D/code/unity/RhythmMaster/Lua/Config/PanelConfig.lua",
 		"/D/code/unity/RhythmMaster/Lua/Util/UtilsUI.lua",
 		"/D/code/unity/RhythmMaster/Lua/Module/RhythmWindow.lua",
 		"/D/code/unity/RhythmMaster/Lua/Main.lua",
-		"/D/code/unity/RhythmMaster/Lua/Asset/AssetLoader.lua",
 		"/D/code/unity/RhythmMaster/Lua/Asset/AssetType.lua",
 		"/D/code/unity/RhythmMaster/Lua/Asset/AssetDefine.lua",
 		"/D/code/unity/RhythmMaster/Lua/LComponent/LRadarChart.lua",
@@ -740,15 +751,11 @@
 		"/D/code/unity/LUIDemo/Lua/Demo/LTree/LTreeNodeDataDemo1.lua",
 		"/D/code/unity/LUIDemo/Lua/BaseRequire.lua",
 		"/D/code/unity/LUIDemo/Lua/test.lua",
-		"/D/code/unity/LUIDemo/Lua/Util/EventMgr.lua",
-		"/D/code/unity/LUIDemo/Lua/UIComponent/ListView.lua",
-		"/D/code/unity/Lua/LComponent/LScrollPage.lua",
-		"/D/code/unity/Lua/Util/EventMgr.lua",
-		"/D/code/unity/Lua/LComponent/LScrollView.lua"
+		"/D/code/unity/LUIDemo/Lua/Util/EventMgr.lua"
 	],
 	"find":
 	{
-		"height": 27.0
+		"height": 40.0
 	},
 	"find_in_files":
 	{
@@ -768,6 +775,26 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"pErr",
+			"print",
+			"_Update",
+			"DynamicCurrentPage",
+			"dynamicCurrentPage",
+			"DynamicCurrentPage",
+			"dynamicCurrentPage",
+			"DynamicCurrentPage",
+			"dynamicCurrentPage",
+			"currentPage",
+			"CurrentPage",
+			"currentPage",
+			"Start",
+			"GlobalEventDefine",
+			"PushBack",
+			"nodePool",
+			"poolList",
+			"nodePool",
+			"timerNode",
+			"TimerNode",
 			"_GetDynamicCurrentPage",
 			"dynamicCurrentPage",
 			"DynamicCurrentPage",
@@ -875,27 +902,7 @@
 			"GetModelStandHeight",
 			"uiScals",
 			"rotation",
-			"position",
-			"offsetPosition",
-			"LUIModel",
-			"ModelConfigHelper.GetModelStandHeight",
-			"offsetPosition",
-			"scale",
-			"SetCurrentPage",
-			"initPage",
-			"priorPathList",
-			"CommonReq",
-			"Class\\(.+\\)",
-			"height",
-			"rawImageGo",
-			"cameraGo",
-			"rotation",
-			"childTrans",
-			"rawImage",
-			"InitRenderTexture",
-			"cameraTrans",
-			"offsetPosition",
-			"data"
+			"position"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -919,55 +926,82 @@
 	"groups":
 	[
 		{
-			"selected": 1,
+			"selected": 2,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"file": "Base/LTimer.lua",
+					"file": "Base/GlobalEvent.lua",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 3487,
+						"buffer_size": 168,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								3405,
-								3405
+								0,
+								11
 							]
 						],
 						"settings":
 						{
-							"auto_name": "TimerHeap = Timer",
 							"syntax": "Packages/Lua/Lua.sublime-syntax",
 							"tab_size": 4,
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 2125.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 4,
+					"stack_index": 2,
 					"type": "text"
 				},
 				{
 					"buffer": 1,
-					"file": "LComponent/LScrollPage.lua",
+					"file": "Module/RhythmWindow.lua",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 11223,
+						"buffer_size": 889,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1606,
-								1606
+								852,
+								852
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Lua/Lua.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 360.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "Base/LTimer.lua",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 3626,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								2026,
+								2026
 							]
 						],
 						"settings":
@@ -977,231 +1011,48 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 545.0,
+						"translation.y": 1404.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 0,
 					"type": "text"
 				},
 				{
-					"buffer": 2,
+					"buffer": 3,
+					"file": "Module/RhythmDefine.lua",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 7520,
+						"buffer_size": 59,
 						"regions":
 						{
-							"match":
-							{
-								"flags": 112,
-								"regions":
-								[
-									[
-										104,
-										115
-									],
-									[
-										118,
-										129
-									],
-									[
-										169,
-										180
-									],
-									[
-										341,
-										352
-									],
-									[
-										523,
-										534
-									],
-									[
-										862,
-										873
-									],
-									[
-										1052,
-										1063
-									],
-									[
-										1237,
-										1248
-									],
-									[
-										1481,
-										1492
-									],
-									[
-										1662,
-										1673
-									],
-									[
-										1850,
-										1861
-									],
-									[
-										2013,
-										2024
-									],
-									[
-										2232,
-										2243
-									],
-									[
-										2418,
-										2429
-									],
-									[
-										2632,
-										2643
-									],
-									[
-										2793,
-										2804
-									],
-									[
-										2894,
-										2905
-									],
-									[
-										3071,
-										3082
-									],
-									[
-										3166,
-										3177
-									],
-									[
-										3341,
-										3352
-									],
-									[
-										3586,
-										3597
-									],
-									[
-										3807,
-										3818
-									],
-									[
-										3996,
-										4007
-									],
-									[
-										4205,
-										4216
-									],
-									[
-										4424,
-										4435
-									],
-									[
-										4613,
-										4624
-									],
-									[
-										4779,
-										4790
-									],
-									[
-										4983,
-										4994
-									],
-									[
-										5131,
-										5142
-									],
-									[
-										5309,
-										5320
-									],
-									[
-										5455,
-										5466
-									],
-									[
-										5812,
-										5823
-									],
-									[
-										6164,
-										6175
-									],
-									[
-										6233,
-										6244
-									],
-									[
-										6552,
-										6563
-									],
-									[
-										6860,
-										6871
-									],
-									[
-										7016,
-										7027
-									],
-									[
-										7149,
-										7160
-									],
-									[
-										7203,
-										7214
-									],
-									[
-										7235,
-										7246
-									],
-									[
-										7348,
-										7359
-									],
-									[
-										7447,
-										7458
-									]
-								],
-								"scope": ""
-							}
 						},
 						"selection":
 						[
 							[
-								199,
-								199
+								58,
+								58
 							]
 						],
 						"settings":
 						{
-							"detect_indentation": false,
-							"line_numbers": false,
-							"output_tag": 1,
-							"result_base_dir": "",
-							"result_file_regex": "^([^ \t].*):$",
-							"result_line_regex": "^ +([0-9]+):",
-							"scroll_past_end": true,
-							"syntax": "Packages/Default/Find Results.hidden-tmLanguage",
-							"translate_tabs_to_spaces": false
+							"syntax": "Packages/Lua/Lua.sublime-syntax"
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 3,
+					"stack_index": 5,
 					"type": "text"
 				}
 			]
 		},
 		{
-			"selected": 1,
+			"selected": 2,
 			"sheets":
 			[
 				{
-					"buffer": 3,
+					"buffer": 4,
 					"file": "Main.lua",
 					"semi_transient": false,
 					"settings":
@@ -1213,8 +1064,8 @@
 						"selection":
 						[
 							[
-								1688,
-								1688
+								365,
+								365
 							]
 						],
 						"settings":
@@ -1224,68 +1075,71 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 1270.0,
+						"translation.y": 198.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 5,
-					"type": "text"
-				},
-				{
-					"buffer": 4,
-					"file": "Base/LocalEvent.lua",
-					"semi_transient": true,
-					"settings":
-					{
-						"buffer_size": 1288,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1095,
-								1160
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Lua/Lua.sublime-syntax",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 702.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 1,
+					"stack_index": 6,
 					"type": "text"
 				},
 				{
 					"buffer": 5,
-					"file": "Module/RhythmWindow.lua",
+					"file": "LComponent/LScrollPage.lua",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 124,
+						"buffer_size": 11274,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								80,
-								80
+								3787,
+								3787
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/Lua/Lua.sublime-syntax"
+							"syntax": "Packages/Lua/Lua.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 1638.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 2,
+					"stack_index": 4,
+					"type": "text"
+				},
+				{
+					"buffer": 6,
+					"file": "LComponent/LPanel.lua",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1547,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1093,
+								1093
+							]
+						],
+						"settings":
+						{
+							"history_list_is_closing": true,
+							"syntax": "Packages/Lua/Lua.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 540.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
 					"type": "text"
 				}
 			]
@@ -1346,6 +1200,38 @@
 		"last_filter": "",
 		"selected_items":
 		[
+			[
+				"LTim",
+				"Base\\LTimer.lua"
+			],
+			[
+				"panel",
+				"Manager\\PanelManager.lua"
+			],
+			[
+				"Lpa",
+				"LComponent\\LPanel.lua"
+			],
+			[
+				"LPa",
+				"LComponent\\LScrollPage.lua"
+			],
+			[
+				"AssetLoader",
+				"Asset\\AssetLoader.lua"
+			],
+			[
+				"base",
+				"Base\\BaseClass.lua"
+			],
+			[
+				"globa",
+				"Base\\GlobalEvent.lua"
+			],
+			[
+				"ClassPool",
+				"Pool\\ClassPool.lua"
+			],
 			[
 				"scrollap",
 				"LComponent\\LScrollPage.lua"
@@ -1529,10 +1415,6 @@
 			[
 				"u",
 				"Util\\UtilsBase.lua"
-			],
-			[
-				"base",
-				"Base\\BaseClass.lua"
 			],
 			[
 				"Litem",
