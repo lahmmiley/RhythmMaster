@@ -25,6 +25,8 @@ Vector2Right = Vector3(1, 0)
 Vector3One = Vector3(1, 1, 1)
 Vector3Zero = Vector3(0, 0, 0)
 
+Vector3OutOfView = Vector3(10000, 0, 0)
+
 --优先加载的类路径数组
 PriorClassPathArray = {
     "Base/BaseClass",
@@ -55,12 +57,6 @@ function Main()
 end
 
 function Init()
-    Tween.New()
-    LTimer.New()
-    AssetLoader.New()
-    ModelLoader.New()
-    UIEffectLoader.New()
-    PanelManager.New()
 end
 
 function Update()
@@ -80,6 +76,6 @@ function Update()
     local deltaTime = Time.deltaTime
     LTimer.realtimeSinceStartup = Time.realtimeSinceStartup * 1000
     -- print(LTimer.realtimeSinceStartup)
-    LTimer.Instance:Update(deltaTime)
+    LTimer:GetInstance():Update(deltaTime)
     GlobalEvent.frameUpdate:Dispatcher()
 end

@@ -1,11 +1,13 @@
 AssetLoader = AssetLoader or BaseClass()
 
-function AssetLoader:__init()
-    if AssetLoader.Instance then
-        pError("重复生成单例")
-        return
+function AssetLoader:GetInstance()
+    if self._instance == nil then
+        self._instance = AssetLoader.New()
     end
-    AssetLoader.Instance = self
+    return self._instance
+end
+
+function AssetLoader:__init()
 end
 
 function AssetLoader:Load(path)

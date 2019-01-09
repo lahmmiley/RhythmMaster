@@ -63,12 +63,14 @@ Tween = Tween or BaseClass()
 
 local LuaLeanTween = LeanTween
 
-function Tween:__init()
-    if Tween.Instance then
-        pError("不可以对单例对象重复实例化"..debug.force_traceback())
-        return
+function Tween:GetInstance()
+    if self._instance == nil then
+        self._instance = Tween.New()
     end
-    Tween.Instance = self
+    return self._instance
+end
+
+function Tween:__init()
     LuaLeanTween.init()
 end
 

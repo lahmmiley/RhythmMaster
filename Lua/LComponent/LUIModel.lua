@@ -14,7 +14,7 @@ end
 function LUIModel:StaticInit()
     local rootTrans = GameObject.Find("Preview").transform
     LUIModel.rootTrans = rootTrans
-    LUIModel.cameraTemplate = AssetLoader.Instance:Load(string.format(AssetDefine.UI_PREFAB_PATH, "PreviewCamera"))
+    LUIModel.cameraTemplate = AssetLoader:GetInstance():Load(string.format(AssetDefine.UI_PREFAB_PATH, "PreviewCamera"))
 end
 
 function LUIModel:InitCamera()
@@ -36,7 +36,7 @@ end
 function LUIModel:SetData(loaderData, offsetY, scale, rotation)
     self.loaderData = loaderData
     -- self:InitCamera()
-    local modelGo = ModelLoader.Instance:Load(loaderData)
+    local modelGo = ModelLoader:GetInstance():Load(loaderData)
     self.modelGo = modelGo
     local modelTrans = modelGo.transform
     modelTrans:SetParent(self.transform)

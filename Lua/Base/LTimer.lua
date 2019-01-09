@@ -55,12 +55,15 @@ function TimerList:Add(timerNode)
 end
 
 LTimer = LTimer or BaseClass()
-function LTimer:__init()
-    if LTimer.Instance then
-        pError("不可以对单例对象重复实例化")
-        return
+
+function LTimer:GetInstance()
+    if self._instance == nil then
+        self._instance = LTimer.New()
     end
-    LTimer.Instance = self
+    return self._instance
+end
+
+function LTimer:__init()
     self.id = 0
     self.nodePool = ClassPool.New(TimerNode)
     self.listPool = ClassPool.New(TimerList)

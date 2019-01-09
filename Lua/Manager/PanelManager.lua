@@ -1,12 +1,13 @@
 PanelManager = PanelManager or BaseClass()
 
-function PanelManager:__init()
-    if PanelManager.Instance then
-        pError("重复生成单例")
-        return
+function PanelManager:GetInstance()
+    if self._instance == nil then
+        self._instance = PanelManager.New()
     end
-    PanelManager.Instance = self
+    return self._instance
+end
 
+function PanelManager:__init()
     self.update = function() self:Update() end
     self:AddListener()
 

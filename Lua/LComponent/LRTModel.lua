@@ -56,7 +56,7 @@ function LRTModel:StaticInit()
     local rootTrans = GameObject.Find("Preview").transform
     LRTModel.rootTrans = rootTrans
     LRTModel.X = 0
-    LRTModel.cameraTemplate = AssetLoader.Instance:Load(string.format(AssetDefine.UI_PREFAB_PATH, "PreviewCamera"))
+    LRTModel.cameraTemplate = AssetLoader:GetInstance():Load(string.format(AssetDefine.UI_PREFAB_PATH, "PreviewCamera"))
 end
 
 function LRTModel:InitCamera()
@@ -95,7 +95,7 @@ function LRTModel:SetData(loaderData, offsetY, scale, rotation)
         GameObject.Destroy(self.modelGo)
         self.modelGo = nil
     end
-    local modelGo = ModelLoader.Instance:Load(loaderData)
+    local modelGo = ModelLoader:GetInstance():Load(loaderData)
     self.modelGo = modelGo
     local modelTrans = modelGo.transform
     UtilsBase.SetLayer(modelTrans, "UIModel")

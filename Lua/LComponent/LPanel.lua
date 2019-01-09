@@ -27,7 +27,7 @@ function LPanel:Show(args)
     self.args = args
     if self.state == LPanel.State.notLoad then
         local assetList = config.assetList
-        local gameObject = AssetLoader.Instance:Load(AssetType.ToLogicPath(assetList[1], AssetType.uiPrefab))
+        local gameObject = AssetLoader:GetInstance():Load(AssetType.ToLogicPath(assetList[1], AssetType.uiPrefab))
         self:AssetsLoaded(gameObject)
     else
         self.gameObject:SetActive(true)

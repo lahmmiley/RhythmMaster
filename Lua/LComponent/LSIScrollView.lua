@@ -120,14 +120,14 @@ function LSIScrollView:Focus(index, tweenMove)
     if self:_IsVerticalScroll() then
         local targetY = self:_LimitY(-position.y)
         if tweenMove then
-            self.focusTweenId = Tween.Instance:MoveLocalY(self.contentTrans.gameObject, targetY, 0.3).id
+            self.focusTweenId = Tween:GetInstance():MoveLocalY(self.contentTrans.gameObject, targetY, 0.3).id
         else
             UtilsUI.SetAnchoredY(self.contentTrans, targetY)
         end
     else
         local targetX = self:_LimitX(-position.x)
         if tweenMove then
-            self.focusTweenId = Tween.Instance:MoveLocalX(self.contentTrans.gameObject, targetX, 0.3).id
+            self.focusTweenId = Tween:GetInstance():MoveLocalX(self.contentTrans.gameObject, targetX, 0.3).id
         else
             UtilsUI.SetAnchoredX(self.contentTrans, targetX)
         end

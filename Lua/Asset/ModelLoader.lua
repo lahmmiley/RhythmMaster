@@ -1,15 +1,17 @@
 ModelLoader = ModelLoader or BaseClass()
 
-function ModelLoader:__init()
-    if ModelLoader.Instance then
-        pError("重复生成单例")
-        return
+function ModelLoader:GetInstance()
+    if self._instance == nil then
+        self._instance = ModelLoader.New()
     end
-    ModelLoader.Instance = self
+    return self._instance
+end
+
+function ModelLoader:__init()
 end
 
 function ModelLoader:Load(loaderData)
-    local prefab = AssetLoader.Instance:Load(loaderData:GetModelPath())
+    local prefab = AssetLoader:GetInstance():Load(loaderData:GetModelPath())
     local go = GameObject.Instantiate(prefab)
     go.name = loaderData.modelId
     self:SetSkin(loaderData, go.transform)
@@ -21,7 +23,7 @@ function ModelLoader:SetSkin(loaderData, transform)
     local renderer = transform:Find("Mesh_body"):GetComponent(Renderer)
     local mpb = MaterialPropertyBlock()
     renderer:GetPropertyBlock(mpb)
-    local skin = AssetLoader.Instance:Load(loaderData:GetSkinPath())
+    local skin = AssetLoader:GetInstance():Load(loaderData:GetSkinPath())
     local textureId = Shader.PropertyToID("_MainTex")
     mpb:SetTexture(textureId, skin)
     renderer:SetPropertyBlock(mpb)
@@ -32,7 +34,7 @@ function ModelLoader:SetAnimation(loaderData, go)
     local animationPathList = loaderData:GetAnimationPathList()
     for i = 1, #animationPathList do
         local path = animationPathList[i]
-        local clip = AssetLoader.Instance:Load(path)
+        local clip = AssetLoader:GetInstance():Load(path)
         local clipName = clip.name
         animation:AddClip(clip, clipName)
     end

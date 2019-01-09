@@ -4,6 +4,38 @@
 		"selected_items":
 		[
 			[
+				"_",
+				"_instance"
+			],
+			[
+				"pi",
+				"pipelineX"
+			],
+			[
+				"p",
+				"pipelineX"
+			],
+			[
+				"rh",
+				"rhythmItem"
+			],
+			[
+				"star",
+				"startButtonGo"
+			],
+			[
+				"In",
+				"InputUpdate"
+			],
+			[
+				"Pi",
+				"PipelineCreate"
+			],
+			[
+				"game",
+				"GameObject"
+			],
+			[
 				"GetM",
 				"GetMusicCurrentTime"
 			],
@@ -170,10 +202,6 @@
 			[
 				"rend",
 				"renderer"
-			],
-			[
-				"In",
-				"Instance"
 			],
 			[
 				"Ass",
@@ -440,10 +468,6 @@
 				"sizeDelta"
 			],
 			[
-				"star",
-				"startIndex"
-			],
-			[
 				"st",
 				"string"
 			],
@@ -490,89 +514,25 @@
 			[
 				"Get",
 				"_GetItemHeight"
-			],
-			[
-				"child",
-				"childLength"
-			],
-			[
-				"childL",
-				"childLength"
-			],
-			[
-				"chi",
-				"childList"
-			],
-			[
-				"_GetItem",
-				"_GetItemTemplate"
-			],
-			[
-				"itemType",
-				"itemTypeDict"
-			],
-			[
-				"mas",
-				"maskHeight"
 			]
 		]
 	},
 	"buffers":
 	[
 		{
-			"file": "Config/RhythmConfig.lua",
+			"file": "Asset/AudioClipLoader.lua",
 			"settings":
 			{
-				"buffer_size": 645,
-				"encoding": "UTF-8",
-				"line_ending": "Unix",
-				"name": "RhythmConfig = RhythmConfig or {}"
-			}
-		},
-		{
-			"contents": "RhythmDefine = RhythmDefine or {}\n\nRhythmDefine.State = {\n    prepare = 1,    --准备\n    playing = 2,    --开始\n    completed = 2,    --开始\n}\n\n--速度\nRhythmDefine.Velocity = 100\n",
-			"file": "Module/RhythmDefine.lua",
-			"file_size": 156,
-			"file_write_time": 131914046979940008,
-			"settings":
-			{
-				"buffer_size": 171,
+				"buffer_size": 246,
 				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "Module/RhythmWindow.lua",
+			"file": "Manager/PanelManager.lua",
 			"settings":
 			{
-				"buffer_size": 1939,
-				"encoding": "UTF-8",
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "Pool/ObjectPool.lua",
-			"settings":
-			{
-				"buffer_size": 551,
-				"encoding": "UTF-8",
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "Module/RhythmItem.lua",
-			"settings":
-			{
-				"buffer_size": 506,
-				"encoding": "UTF-8",
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "Pool/ClassPool.lua",
-			"settings":
-			{
-				"buffer_size": 658,
+				"buffer_size": 1948,
 				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			}
@@ -611,45 +571,53 @@
 	"expanded_folders":
 	[
 		"/D/code/unity/RhythmMaster/Lua",
+		"/D/code/unity/RhythmMaster/Lua/Asset",
 		"/D/code/unity/RhythmMaster/Lua/Base",
-		"/D/code/unity/RhythmMaster/Lua/Config",
-		"/D/code/unity/RhythmMaster/Lua/ConfigHelper",
-		"/D/code/unity/RhythmMaster/Lua/LComponent",
+		"/D/code/unity/RhythmMaster/Lua/Manager",
 		"/D/code/unity/RhythmMaster/Lua/Module",
 		"/D/code/unity/RhythmMaster/Lua/Pool",
 		"/D/code/unity/RhythmMaster/Lua/Util"
 	],
 	"file_history":
 	[
-		"/D/code/unity/RhythmMaster/Lua/LComponent/LPanel.lua",
-		"/D/code/unity/RhythmMaster/Lua/Base/LTimer.lua",
-		"/D/code/unity/RhythmMaster/Lua/Pool/ClassPool.lua",
-		"/D/code/unity/RhythmMaster/Lua/ConfigHelper/ModelConfigHelper.lua",
-		"/D/code/unity/RhythmMaster/Lua/Main.lua",
-		"/D/code/unity/RhythmMaster/Lua/ConfigHelper/RhythmConfigHelper.lua",
-		"/D/code/unity/RhythmMaster/Lua/Base/LocalEvent.lua",
-		"/D/code/unity/RhythmMaster/Lua/Util/UtilsBase.lua",
-		"/D/code/unity/RhythmMaster/Lua/Config/PanelConfig.lua",
-		"/D/code/unity/RhythmMaster/Lua/Base/GlobalEvent.lua",
-		"/D/code/unity/RhythmMaster/Lua/LComponent/LScrollPage.lua",
-		"/D/code/unity/RhythmMaster/Lua/Module/RhythmWindow.lua",
-		"/D/code/unity/RhythmMaster/Lua/Manager/PanelManager.lua",
 		"/D/code/unity/RhythmMaster/Lua/Module/RhythmItem.lua",
-		"/D/code/unity/RhythmMaster/Lua/Base/BaseClass.lua",
+		"/D/code/unity/RhythmMaster/Lua/Module/RhythmDefine.lua",
+		"/D/code/unity/RhythmMaster/Lua/Manager/SoundManager.lua",
 		"/D/code/unity/RhythmMaster/Lua/Asset/AssetLoader.lua",
+		"/D/code/unity/RhythmMaster/Lua/Module/RhythmWindow.lua",
+		"/D/code/unity/RhythmMaster/Lua/Base/BaseClass.lua",
+		"/D/code/unity/RhythmMaster/Lua/Base/LTimer.lua",
+		"/D/code/unity/RhythmMaster/Lua/Util/Tween.lua",
+		"/D/code/unity/RhythmMaster/Lua/Util/UtilsBase.lua",
+		"/D/code/unity/RhythmMaster/Lua/Main.lua",
+		"/D/code/unity/RhythmMaster/Lua/LComponent/LUIModel.lua",
+		"/D/code/unity/RhythmMaster/Lua/LComponent/LSIScrollView.lua",
+		"/D/code/unity/RhythmMaster/Lua/LComponent/LScrollPage.lua",
+		"/D/code/unity/RhythmMaster/Lua/LComponent/LRTModel.lua",
+		"/D/code/unity/RhythmMaster/Lua/LComponent/LPanel.lua",
+		"/D/code/unity/RhythmMaster/Lua/LComponent/LMIScrollView.lua",
+		"/D/code/unity/RhythmMaster/Lua/Asset/UIEffectLoader.lua",
+		"/D/code/unity/RhythmMaster/Lua/Asset/ModelLoader.lua",
+		"/D/code/unity/RhythmMaster/Lua/Manager/PanelManager.lua",
+		"/D/code/unity/RhythmMaster/Lua/Util/UtilsUI.lua",
+		"/D/code/unity/RhythmMaster/Lua/Pool/ClassPool.lua",
+		"/D/code/unity/RhythmMaster/Lua/Pool/GameObjectPool.lua",
+		"/D/code/unity/RhythmMaster/Lua/Lua.sublime-workspace",
+		"/D/code/unity/RhythmMaster/Lua/Base/GlobalEvent.lua",
+		"/D/code/unity/RhythmMaster/Lua/Base/LocalEvent.lua",
+		"/D/code/unity/RhythmMaster/Lua/Config/RhythmConfig.lua",
+		"/D/code/unity/RhythmMaster/Lua/ConfigHelper/ModelConfigHelper.lua",
+		"/D/code/unity/RhythmMaster/Lua/ConfigHelper/RhythmConfigHelper.lua",
+		"/D/code/unity/RhythmMaster/Lua/Pool/ObjectPool.lua",
+		"/D/code/unity/RhythmMaster/Lua/Config/PanelConfig.lua",
 		"/D/code/unity/RhythmMaster/Lua/Base/EventId.lua",
 		"/D/code/unity/RhythmMaster/Lua/LComponent/LDefine.lua",
-		"/D/code/unity/RhythmMaster/Lua/LComponent/LMIScrollView.lua",
-		"/D/code/unity/RhythmMaster/Lua/Util/Tween.lua",
-		"/D/code/unity/RhythmMaster/Lua/Lua.sublime-workspace",
 		"/D/code/unity/RhythmMaster/Lua/LComponent/LItem.lua",
 		"/D/code/unity/RhythmMaster/Lua/LComponent/LList.lua",
 		"/D/code/unity/RhythmMaster/Lua/LComponent/LScrollView.lua",
-		"/D/code/unity/RhythmMaster/Lua/LComponent/LSIScrollView.lua",
 		"/D/code/unity/RhythmMaster/Lua/LComponent/LTree.lua",
 		"/D/code/unity/RhythmMaster/Lua/LComponent/LTreeNode.lua",
 		"/D/code/unity/RhythmMaster/Lua/Base/EventName.lua",
-		"/D/code/unity/RhythmMaster/Lua/Util/UtilsUI.lua",
 		"/D/code/unity/RhythmMaster/Lua/Asset/AssetType.lua",
 		"/D/code/unity/RhythmMaster/Lua/Asset/AssetDefine.lua",
 		"/D/code/unity/RhythmMaster/Lua/LComponent/LRadarChart.lua",
@@ -739,16 +707,7 @@
 		"/D/code/unity/LUIDemo/Lua/Demo/LScrollViewDemo1.lua",
 		"/D/code/unity/LUIDemo/Lua/Demo/LTree/LTreeNodeDataDemo2_2.lua",
 		"/D/code/unity/LUIDemo/Lua/Demo/LTree/LTreeNodeDemo.lua",
-		"/D/code/unity/LUIDemo/Lua/Demo/LTree/LTreeNodeDemo_1.lua",
-		"/D/code/unity/LUIDemo/Lua/LComponent/LTreeNode.lua",
-		"/D/code/unity/LUIDemo/Lua/Lua.sublime-project",
-		"/D/code/unity/LUIDemo/Lua/Demo/LTree/LTreeNodeDemo1.lua",
-		"/D/code/unity/LUIDemo/Lua/Demo/LTree/LTreeDemo2.lua",
-		"/D/code/unity/LUIDemo/Lua/Demo/LTree/LTreeNodeDemo2_2.lua",
-		"/D/code/unity/LUIDemo/Lua/Test/LTreeTest.lua",
-		"/D/code/unity/LUIDemo/Lua/Demo/LTree/LTreeNodeDemo2_1.lua",
-		"/D/code/unity/LUIDemo/Lua/Demo/LTree/LTreeNodeDataDemo1.lua",
-		"/D/code/unity/LUIDemo/Lua/BaseRequire.lua"
+		"/D/code/unity/LUIDemo/Lua/Demo/LTree/LTreeNodeDemo_1.lua"
 	],
 	"find":
 	{
@@ -772,6 +731,46 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"UIEffectLoader",
+			"IEffectLoader",
+			"AssetLoader",
+			"Instance",
+			"LTimer",
+			"PanelManager",
+			"SoundManager",
+			"Instance",
+			"PanelManager",
+			"pipelineX",
+			"pipelineTrans",
+			"showRhythmItemList",
+			"StartButtonClick",
+			"showRhythmItemList",
+			"RedButtonClick",
+			"InputUpdate",
+			"pipelineX",
+			"CreateRhythmItem",
+			"PushBack",
+			"rhythmPointTemplate",
+			"CreateRhythmItem",
+			"rhythmConfigList",
+			"rhythmPointTemplate",
+			"rhythmPointGameObjectPool",
+			"RhythmItem",
+			"Object",
+			"object",
+			"objectList",
+			"GameObjectPool",
+			"ObjectPool",
+			"rhythmPointObjectPool",
+			"rhythmItemPool",
+			"CountDown",
+			"RemoveListener",
+			"_AddListener",
+			"AddListener",
+			"GlobalEvent",
+			"LuaLeanTween",
+			"UtilsBase",
+			"CreateRhythmItem",
 			"createdIndex",
 			"rhythmItem",
 			"CreateRhythmItem",
@@ -859,47 +858,7 @@
 			"TimerHeap",
 			"dict",
 			"CalcNextRunTime",
-			"self",
-			"list",
-			"gapVertical",
-			"repeat",
-			"GlobalEvent",
-			"Tween",
-			"handlers",
-			"RemoveAll",
-			"name",
-			"_xpcall",
-			"handlerList",
-			"Add",
-			"AddListener",
-			"Remove",
-			"Dispatcher",
-			"AddOnce",
-			"_pairs",
-			"Fire",
-			"Dispatcher",
-			"Fire",
-			"EventLib",
-			"2",
-			"1",
-			"UtilsTable",
-			"Remove",
-			"RemoveAll",
-			"Release",
-			"lastWindow",
-			"currentWindow",
-			"AssetLoader",
-			"config",
-			"VEHICLE_PREFAB_PATH",
-			"AssetDefine",
-			"ModelConfig",
-			"iconId",
-			"AssetDefine.ANIMATION_PATH",
-			"AssetDefine.SKIN_PATH",
-			"AssetDefine.PREFAB_PATH",
-			"UIEffectLoader",
-			"ModelLoader",
-			"LLayerTest"
+			"self"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -907,6 +866,7 @@
 		"regex": false,
 		"replace_history":
 		[
+			"GameObjectPool",
 			"Dispatcher",
 			"LocalEvent",
 			"AssetDefine.VEHICLE_ANIMATION_PATH",
@@ -917,59 +877,30 @@
 		"reverse": false,
 		"show_context": true,
 		"use_buffer2": true,
-		"whole_word": false,
+		"whole_word": true,
 		"wrap": true
 	},
 	"groups":
 	[
 		{
-			"selected": 2,
+			"selected": 0,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"file": "Config/RhythmConfig.lua",
+					"file": "Asset/AudioClipLoader.lua",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 645,
+						"buffer_size": 246,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								200,
-								200
-							]
-						],
-						"settings":
-						{
-							"auto_name": "RhythmConfig = RhythmConfig or {}",
-							"syntax": "Packages/Lua/Lua.sublime-syntax"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 5,
-					"type": "text"
-				},
-				{
-					"buffer": 1,
-					"file": "Module/RhythmDefine.lua",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 171,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								122,
-								122
+								246,
+								246
 							]
 						],
 						"settings":
@@ -978,67 +909,9 @@
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 4,
-					"type": "text"
-				},
-				{
-					"buffer": 2,
-					"file": "Module/RhythmWindow.lua",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 1939,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								967,
-								967
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Lua/Lua.sublime-syntax",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 432.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 0,
-					"type": "text"
-				},
-				{
-					"buffer": 3,
-					"file": "Pool/ObjectPool.lua",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 551,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								545,
-								545
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Lua/Lua.sublime-syntax"
-						},
-						"translation.x": 0.0,
-						"translation.y": 270.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 3,
 					"type": "text"
 				}
 			]
@@ -1048,25 +921,28 @@
 			"sheets":
 			[
 				{
-					"buffer": 4,
-					"file": "Module/RhythmItem.lua",
+					"buffer": 1,
+					"file": "Manager/PanelManager.lua",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 506,
+						"buffer_size": 1948,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								49,
-								59
+								196,
+								196
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/Lua/Lua.sublime-syntax"
+							"history_list_is_closing": true,
+							"syntax": "Packages/Lua/Lua.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
@@ -1074,43 +950,13 @@
 					},
 					"stack_index": 1,
 					"type": "text"
-				},
-				{
-					"buffer": 5,
-					"file": "Pool/ClassPool.lua",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 658,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								537,
-								545
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Lua/Lua.sublime-syntax",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 324.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 2,
-					"type": "text"
 				}
 			]
 		}
 	],
 	"incremental_find":
 	{
-		"height": 27.0
+		"height": 39.0
 	},
 	"input":
 	{
@@ -1164,11 +1010,43 @@
 		"selected_items":
 		[
 			[
-				"clas",
-				"Pool\\ClassPool.lua"
+				"PanelManager",
+				"Manager\\PanelManager.lua"
+			],
+			[
+				"UIEffectLoader",
+				"Asset\\UIEffectLoader.lua"
+			],
+			[
+				"ModelLoader",
+				"Asset\\ModelLoader.lua"
+			],
+			[
+				"twee",
+				"Util\\Tween.lua"
+			],
+			[
+				"bac",
+				"Base\\BaseClass.lua"
+			],
+			[
+				"utilsui",
+				"Util\\UtilsUI.lua"
 			],
 			[
 				"ClassPool",
+				"Pool\\ClassPool.lua"
+			],
+			[
+				"globa",
+				"Base\\GlobalEvent.lua"
+			],
+			[
+				"LPa",
+				"LComponent\\LPanel.lua"
+			],
+			[
+				"clas",
 				"Pool\\ClassPool.lua"
 			],
 			[
@@ -1208,20 +1086,12 @@
 				"LComponent\\LPanel.lua"
 			],
 			[
-				"LPa",
-				"LComponent\\LScrollPage.lua"
-			],
-			[
 				"AssetLoader",
 				"Asset\\AssetLoader.lua"
 			],
 			[
 				"base",
 				"Base\\BaseClass.lua"
-			],
-			[
-				"globa",
-				"Base\\GlobalEvent.lua"
 			],
 			[
 				"scrollap",
@@ -1236,20 +1106,12 @@
 				"Manager\\PanelManager.lua"
 			],
 			[
-				"utilsui",
-				"Util\\UtilsUI.lua"
-			],
-			[
 				"ev",
 				"Base\\EventLib.lua"
 			],
 			[
 				"basl",
 				"Base\\BaseClass.lua"
-			],
-			[
-				"twee",
-				"Util\\Tween.lua"
 			],
 			[
 				"LEmojiTextItem",
