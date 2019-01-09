@@ -15,6 +15,7 @@ function LPanel:__init(id)
 end
 
 function LPanel:__release()
+    self:_RemoveListener()
 end
 
 function LPanel:Show(args)
@@ -30,7 +31,7 @@ function LPanel:Show(args)
         self:AssetsLoaded(gameObject)
     else
         self.gameObject:SetActive(true)
-        self:AddListener()
+        self:_AddListener()
         self:OnShow()
     end
 end
@@ -44,7 +45,7 @@ function LPanel:AssetsLoaded(gameObject)
     if self.active then
         self:InitPanel(gameObject)
         gameObject:SetActive(true)
-        self:AddListener()
+        self:_AddListener()
         self:OnShow()
     end
 end
@@ -57,7 +58,7 @@ function LPanel:Hide()
     if self.state ~= LPanel.State.loaded then
         return
     end
-    self:RemoveListener()
+    self:_RemoveListener()
     self.gameObject:SetActive(false)
     self.releaseTime = os.time() + 30
 end
@@ -65,7 +66,21 @@ end
 function LPanel:OnHide()
 end
 
+function LPanel:_AddListener()
+    if self.frameUpdate then
+        GlobalEvent.frameUpdate:Add(self.frameUpdate)
+    end
+    self:AddListener()
+end
+
 function LPanel:AddListener()
+end
+
+function LPanel:_RemoveListener()
+    if self.frameUpdate then
+        GlobalEvent.frameUpdate:Remove(self.frameUpdate)
+    end
+    self:RemoveListener()
 end
 
 function LPanel:RemoveListener()
@@ -83,10 +98,10 @@ function LPanel:DestroyGameObject(name)
     UtilsBase.DestroyGameObject(self, name)
 end
 
-function UtilsBase.CancelTween(name)
+function LPanel:CancelTween(name)
     UtilsBase.CancelTween(self, name)
 end
 
-function UtilsBase.CancelTweenIdList(name)
+function LPanel:CancelTweenIdList(name)
     UtilsBase.CancelTweenIdList(self, name)
 end

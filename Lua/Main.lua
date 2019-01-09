@@ -56,8 +56,7 @@ end
 
 function Init()
     Tween.New()
-    GlobalEvent.New()
-    TimerHeap.New()
+    LTimer.New()
     AssetLoader.New()
     ModelLoader.New()
     UIEffectLoader.New()
@@ -80,7 +79,7 @@ function Update()
     end
     local deltaTime = Time.deltaTime
     LTimer.realtimeSinceStartup = Time.realtimeSinceStartup * 1000
-    print(LTimer.realtimeSinceStartup)
+    -- print(LTimer.realtimeSinceStartup)
     LTimer.Instance:Update(deltaTime)
-    GlobalEvent.Instance:Fire(EventId.frameUpdate, deltaTime)
+    GlobalEvent.frameUpdate:Dispatcher()
 end

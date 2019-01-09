@@ -1,4 +1,4 @@
-RhythmConfigHelper = RhythmConfigHelper = {}
+RhythmConfigHelper = RhythmConfigHelper or {}
 
 local _table_insert = table.insert
 local _table_sort = table.sort

@@ -1,24 +1,43 @@
 RhythmItem = RhythmItem or BaseClass()
 
-function RhythmItem:__init(config, objectPool)
-    self:Reset(config, objectPool)
+RhythmItem.ColorRed = Color(1, 0, 0)
+RhythmItem.ColorBlue = Color(0, 0, 1)
+
+function RhythmItem:__init(template)
+    self.gameObject = GameObject.Instantiate(template)
+    local transform = self.gameObject.transform
+    self.transform = transform
+    self.image = UtilsUI.GetImage(transform)
 end
 
-function RhythmItem:Reset(config, objectPool)
-    self.config = config
-    self.objectPool = objectPool
-    self.gameObject = objectPool:Get()
+function RhythmItem:SetParent(parent, position)
+    self.transform:SetParent(parent)
+    self.transform.localScale = Vector3One
+    self.transform.anchoredPosition3D = position
+    self.x = position.x
 end
 
-function RhythmItem:PushBack()
-    self.objectPool:PushBack(self.gameObject)
-    self.gameObject = nil
+function RhythmItem:SetActive(active)
+    self.gameObject:SetActive(active)
+end
+
+function RhythmItem:Recycle()
+    self.transform.anchoredPosition3D = Vector3OutOfView
+end
+
+function RhythmItem:GetX()
+    return self.x
 end
 
 function RhythmItem:__release()
-    self.objectPool = nil
+    self.gameObjectPool = nil
     self.gameObject = nil
 end
 
-function RhythmItem:SetData()
+function RhythmItem:SetData(config)
+    if config.type == 1 then
+        self.image.color = RhythmItem.ColorRed
+    else
+        self.image.color = RhythmItem.ColorBlue
+    end
 end

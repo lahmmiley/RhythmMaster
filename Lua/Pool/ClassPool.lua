@@ -24,9 +24,9 @@ function ClassPool:Get(...)
     return self.class.New(...)
 end
 
-function ClassPool:PushBack(data)
-    if data.PushBack then
-        data:PushBack()
+function ClassPool:Recycle(data)
+    if data.Recycle then
+        data:Recycle()
     end
     _table_insert(self.classPoolList, data)
 end

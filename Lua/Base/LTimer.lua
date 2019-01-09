@@ -124,7 +124,7 @@ function LTimer:Update(deltaTime)
                 end
                 timerNode = timerNode.next
             end
-            self.listPool:PushBack(list)
+            self.listPool:Recycle(list)
         end
     end
     for i = 1, #self.addTimerNodeList do
@@ -134,7 +134,7 @@ function LTimer:Update(deltaTime)
         if timerNode.expireTime ~= nil then
             self:InsertSlot(timerNode)
         else
-            self.nodePool:PushBack(timerNode)
+            self.nodePool:Recycle(timerNode)
         end
     end
 end
