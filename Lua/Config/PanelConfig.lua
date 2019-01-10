@@ -1,6 +1,7 @@
 PanelId = {
     loginWindow = 1,
     selectWindow = 2,
+    rhythmWindow = 3,
 }
 
 PanelOrder = {
@@ -26,6 +27,12 @@ PanelConfig.Data = {
             id = PanelId.selectWindow, className = "SelectWindow", cacheTime = 30, fullScreen = true, order = PanelOrder.FirstPanel, window = true,
             assetList = {
                 {path = "SelectWindow"},
+            },
+          },
+    [PanelId.rhythmWindow] = {
+            id = PanelId.selectWindow, className = "RhythmWindow", cacheTime = 30, fullScreen = true, order = PanelOrder.FirstPanel, window = true,
+            assetList = {
+                {path = "RhythmWindow"},
             },
           },
 }

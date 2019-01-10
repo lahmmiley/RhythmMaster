@@ -6,6 +6,8 @@ AssetType = {
     vehiclePrefab = 3,      --载具预设
     vehicleSkin = 4,        --载具贴图
     vehicleAnimation = 5,   --载具动作
+    music = 6,              --音乐
+    sound = 7,              --UI音效
 }
 
 --path assetPath 为特定资源的路径

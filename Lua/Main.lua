@@ -5,7 +5,7 @@ _print = print
 print = function(msg)
     Debug.LogError(msg .. "\n" .. debug.traceback())
 end
-pError = function(str)
+pError = function(msg)
     Debug.LogError(msg .. "\n" .. debug.traceback())
 end
 
@@ -15,12 +15,36 @@ math.round = function(value)
     return math.floor(value + 0.5)
 end
 
+IS_DEBUG = true
+
+if IS_DEBUG then
+    local mt = {
+        __index = function(_, key)
+            local info = debug.getinfo(2, "S")
+            if info and info.what ~= "main" and info.what ~= "C" then
+                pError("访问不存在的全局变量：" .. key)
+            end
+            return rawget(_G, key)
+        end,
+        __newindex = function(_, key, value)
+            local info = debug.getinfo(2, "S")
+            if info and info.what ~= "main" and info.what ~= "C" then
+                pError("赋值不存在的全局变量：" .. key)
+            end
+            return rawset(_G, key, value)
+        end
+    }
+    setmetatable(_G, mt)
+end
+
+
 Vector2One = Vector3(1, 1)
 Vector2Zero = Vector3(0, 0)
 Vector2Down = Vector3(0, -1)
 Vector2Left = Vector3(-1, 0)
 Vector2Up = Vector3(0, 1)
 Vector2Right = Vector3(1, 0)
+Vector2Middle = Vector3(0.5, 0.5)
 
 Vector3One = Vector3(1, 1, 1)
 Vector3Zero = Vector3(0, 0, 0)
@@ -53,10 +77,7 @@ Main.LoadLuaClass = function(classPathArray)
 end
 
 function Main()
-    Init()
-end
-
-function Init()
+    PanelManager:GetInstance():Show(PanelId.rhythmWindow)
 end
 
 function Update()
@@ -79,3 +100,4 @@ function Update()
     LTimer:GetInstance():Update(deltaTime)
     GlobalEvent.frameUpdate:Dispatcher()
 end
+

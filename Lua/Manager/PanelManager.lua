@@ -8,6 +8,7 @@ function PanelManager:GetInstance()
 end
 
 function PanelManager:__init()
+    self.uiRootTrans = GameObject.Find("Canvas").transform
     self.update = function() self:Update() end
     self:AddListener()
 
@@ -39,7 +40,7 @@ function PanelManager:Update()
 end
 
 function PanelManager:Show(id)
-    local config = PanelConfig.data[id]
+    local config = PanelConfig.Data[id]
     local panel
     if self.panelDict[id] == nil then
         local className = config.className
@@ -69,6 +70,10 @@ function PanelManager:Hide(id)
         self.currentWindow = self.lastWindow
         self.lastWindow = nil
     end
+end
+
+function PanelManager:GetUIRoot()
+    return self.uiRootTrans
 end
 
 function PanelManager:AddListener()

@@ -28,5 +28,5 @@ function ClassPool:Recycle(data)
     if data.Recycle then
         data:Recycle()
     end
-    _table_insert(self.classPoolList, data)
+    _table_insert(self.classList, data)
 end

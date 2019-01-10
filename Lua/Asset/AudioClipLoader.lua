@@ -7,5 +7,5 @@ function AudioClipLoader:GetInstance()
     return self._instance
 end
 
-function AudioClipLoader:__init()
+function AudioClipLoader:LoadMusic(id)
 end

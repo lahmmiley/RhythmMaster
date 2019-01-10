@@ -66,7 +66,7 @@ function UtilsBase.CancelTweenIdList(object, name)
 end
 
 -- 序列化
-function UtilsBase.serialize(obj, name, newline, depth, keytab)
+function UtilsBase.Serialize(obj, name, newline, depth, keytab)
     local keylist
     if keytab == nil then
         keylist = {}
@@ -98,7 +98,7 @@ function UtilsBase.serialize(obj, name, newline, depth, keytab)
             tmp = tmp .. "{" .. (newline and "\n" or "")
 
             for k, v in _pairs(obj) do
-                tmp =  tmp .. UtilsBase.serialize(v, k, newline, depth + 1, keylist) .. "," .. (newline and "\n" or "")
+                tmp =  tmp .. UtilsBase.Serialize(v, k, newline, depth + 1, keylist) .. "," .. (newline and "\n" or "")
             end
 
             tmp = tmp .. string.rep(space, depth) .. "}"
@@ -120,8 +120,8 @@ function UtilsBase.serialize(obj, name, newline, depth, keytab)
     return tmp
 end
 
-function UtilsBase.dump(obj, name)
-    print(UtilsBase.serialize(obj, name, true, 0))
+function UtilsBase.Dump(obj, name)
+    print(UtilsBase.Serialize(obj, name, true, 0))
 end
 
 function UtilsBase.XPCall(func, errcb)
@@ -144,16 +144,6 @@ function UtilsBase.SetParent(childTrans, parentTrans)
     childTrans.localScale = Vector3.one
     childTrans.localPosition = Vector3.zero
     childTrans.localRotation = Quaternion.identity
-end
-
-function UtilsBase.UISetParent(childRect, parentTrans, anchoredPosition, scale, rotation)
-    childRect:SetParent(parentTrans)
-    childRect.pivot = Vector2Up
-    childRect.anchorMin = Vector2Up
-    childRect.anchorMax = Vector2Up
-    childRect.anchoredPosition = anchoredPosition or Vector2Zero
-    childRect.localScale = scale or Vector3One
-    childRect.localEulerAngles = rotation or Vector3Zero
 end
 
 function UtilsBase.SetLayer(transform, layerName)

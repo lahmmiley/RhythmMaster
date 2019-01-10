@@ -128,3 +128,21 @@ function UtilsUI.SetZ(transform, z)
     local lx, ly, lz = transform.localPosition.x, transform.localPosition.y, transform.localPosition.z
     transform.localPosition = Vector3(lx, ly, z)
 end
+
+function UtilsUI.SetParent(childRect, parentTrans, anchoredPosition, scale, rotation)
+    childRect:SetParent(parentTrans)
+    childRect.pivot = Vector2Up
+    childRect.anchorMin = Vector2Up
+    childRect.anchorMax = Vector2Up
+    childRect.anchoredPosition = anchoredPosition or Vector2Zero
+    childRect.localScale = scale or Vector3One
+    childRect.localEulerAngles = rotation or Vector3Zero
+end
+
+function UtilsUI.PanelSetParent(childRect, parentTrans)
+    childRect:SetParent(parentTrans)
+    childRect.localScale = Vector3One
+    childRect.offsetMin = Vector2Zero
+    childRect.offsetMax = Vector2Zero
+    childRect.pivot = Vector2Middle
+end

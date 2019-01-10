@@ -1,5 +1,6 @@
 RhythmWindow = RhythmWindow or BaseClass(LPanel)
 local _table_remove = table.remove
+local _table_insert = table.insert
 
 function RhythmWindow:__init()
     self.frameUpdate = function() self:OnFrameUpdate() end
@@ -19,10 +20,10 @@ function RhythmWindow:InitPanel(gameObject)
     self.rhythmItemPool = ClassPool.New(RhythmItem)
     self.rhythmPointTemplate = transform:Find("RhythmPoint").gameObject
 
-    UtilsUI.AddButtonListener(transform, "redButton", function() self:RedButtonClick() end)
-    UtilsUI.AddButtonListener(transform, "blueButton", function() self:BlueButtonClick() end)
-    self.startButtonGo = transform:Find("startButton").gameObject
-    UtilsUI.AddButtonListener(transform, "startButton", function() self:StartButtonClick() end)
+    UtilsUI.AddButtonListener(transform, "RedButton", function() self:RedButtonClick() end)
+    UtilsUI.AddButtonListener(transform, "BlueButton", function() self:BlueButtonClick() end)
+    self.startButtonGo = transform:Find("StartButton").gameObject
+    UtilsUI.AddButtonListener(transform, "StartButton", function() self:StartButtonClick() end)
 end
 
 function RhythmWindow:AddListener()
@@ -63,21 +64,23 @@ end
 function RhythmWindow:CreateRhythmItem()
     local currentTime = self:GetMusicCurrentTime()
     local createdIndex = self.createdIndex
-    for i = createdIndex, #rhythmConfigList do
+    local rhythmConfigList = self.rhythmConfigList
+    for i = createdIndex + 1, #rhythmConfigList do
         local config = rhythmConfigList[i]
         if currentTime >= config.time then
+            print("config.time:" .. config.time)
             local rhythmItem = self.rhythmItemPool:Get(self.rhythmPointTemplate)
             local time = config.time - self.startTime
             local x = time * 100 + 150 -- 150是初始偏移值
-            rhythmItem:SetParent(self.pipelineTrans, Vector(x, 0, 0))
+            rhythmItem:SetParent(self.pipelineTrans, Vector3(x, 0, 0))
             rhythmItem:SetData(config)
-            _table_remove(self.showRhythmItemList, rhythmItem)
+            _table_insert(self.showRhythmItemList, rhythmItem)
             self.createdIndex = i
         end
     end
 end
 
-function RhythmWindow:Recycle()
+function RhythmWindow:RecycleRhythmItem()
     local pipelineX = self.pipelineX
     for key, rhythmItem in pairs(self.showRhythmItemList) do
         local x = self:GetRhythmItemX(rhythmItem)
@@ -126,6 +129,7 @@ function RhythmWindow:ClickCheck(clickType)
 end
 
 function RhythmWindow:StartButtonClick()
+    print("StartButtonClick")
     self.startButtonGo:SetActive(false)
     self:Start()
 end

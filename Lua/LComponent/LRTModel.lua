@@ -38,7 +38,7 @@ function LRTModel:__init(transform)
     rawImageGo:AddComponent(RectTransform)
     local rawImageTrans = rawImageGo.transform
     self.rawImageTrans = rawImageTrans
-    UtilsBase.UISetParent(rawImageTrans, transform)
+    UtilsUI.UISetParent(rawImageTrans, transform)
     self.rawImage = rawImageGo:AddComponent(RawImage)
     self.width = transform.sizeDelta.x
     self.height = transform.sizeDelta.y

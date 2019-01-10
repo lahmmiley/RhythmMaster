@@ -9,7 +9,7 @@ LPanel.State = {
 function LPanel:__init(id)
     local config = PanelConfig.Data[id]
     self.config = config
-    self.state = LPanel.State.notLoad
+    self.loadState = LPanel.State.notLoad
     self.active = false
     self.releaseTime = nil
 end
@@ -20,14 +20,14 @@ end
 
 function LPanel:Show(args)
     self.active = true
-    if self.state == LPanel.State.loading then
+    if self.loadState == LPanel.State.loading then
         return
     end
     local config = self.config
     self.args = args
-    if self.state == LPanel.State.notLoad then
+    if self.loadState == LPanel.State.notLoad then
         local assetList = config.assetList
-        local gameObject = AssetLoader:GetInstance():Load(AssetType.ToLogicPath(assetList[1], AssetType.uiPrefab))
+        local gameObject = UIPrefabLoader:GetInstance():Load(assetList[1].path)
         self:AssetsLoaded(gameObject)
     else
         self.gameObject:SetActive(true)
@@ -39,10 +39,11 @@ end
 
 function LPanel:AssetsLoaded(gameObject)
     self.gameObject = gameObject
-    self.state = LPanel.State.loaded
+    self.loadState = LPanel.State.loaded
     --后面改为异步加载
     local gameObject = self.gameObject
     if self.active then
+        self:SetParent(gameObject)
         self:InitPanel(gameObject)
         gameObject:SetActive(true)
         self:_AddListener()
@@ -50,12 +51,16 @@ function LPanel:AssetsLoaded(gameObject)
     end
 end
 
+function LPanel:SetParent(gameObject)
+    UtilsUI.PanelSetParent(gameObject.transform, PanelManager:GetInstance():GetUIRoot())
+end
+
 function LPanel:OnShow()
 end
 
 function LPanel:Hide()
     self.active = false
-    if self.state ~= LPanel.State.loaded then
+    if self.loadState ~= LPanel.State.loaded then
         return
     end
     self:_RemoveListener()
