@@ -28,6 +28,7 @@ function LPanel:Show(args)
     if self.loadState == LPanel.State.notLoad then
         local assetList = config.assetList
         local gameObject = UIPrefabLoader:GetInstance():Load(assetList[1].path)
+
         self:AssetsLoaded(gameObject)
     else
         self.gameObject:SetActive(true)
@@ -39,6 +40,7 @@ end
 
 function LPanel:AssetsLoaded(gameObject)
     self.gameObject = gameObject
+    gameObject.name = self.config.className
     self.loadState = LPanel.State.loaded
     --后面改为异步加载
     local gameObject = self.gameObject

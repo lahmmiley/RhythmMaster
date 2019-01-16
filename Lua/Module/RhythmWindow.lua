@@ -68,10 +68,8 @@ function RhythmWindow:CreateRhythmItem()
     for i = createdIndex + 1, #rhythmConfigList do
         local config = rhythmConfigList[i]
         if currentTime >= config.time then
-            print("config.time:" .. config.time)
             local rhythmItem = self.rhythmItemPool:Get(self.rhythmPointTemplate)
-            local time = config.time - self.startTime
-            local x = time * 100 + 150 -- 150是初始偏移值
+            local x = config.time * 0.1 + 50 -- 后面的数字是初始偏移值
             rhythmItem:SetParent(self.pipelineTrans, Vector3(x, 0, 0))
             rhythmItem:SetData(config)
             _table_insert(self.showRhythmItemList, rhythmItem)
@@ -84,7 +82,8 @@ function RhythmWindow:RecycleRhythmItem()
     local pipelineX = self.pipelineX
     for key, rhythmItem in pairs(self.showRhythmItemList) do
         local x = self:GetRhythmItemX(rhythmItem)
-        if x < 0 then
+        print(x)
+        if x < -RhythmItem.ItemWidth then
             self.rhythmItemPool:Recycle(rhythmItem)
             self.showRhythmItemList[key] = nil
         end

@@ -2,9 +2,11 @@ RhythmItem = RhythmItem or BaseClass()
 
 RhythmItem.ColorRed = Color(1, 0, 0)
 RhythmItem.ColorBlue = Color(0, 0, 1)
+RhythmItem.ItemWidth = 64
 
 function RhythmItem:__init(template)
     self.gameObject = GameObject.Instantiate(template)
+    self.gameObject:SetActive(true)
     local transform = self.gameObject.transform
     self.transform = transform
     self.image = UtilsUI.GetImage(transform)
@@ -35,6 +37,7 @@ function RhythmItem:__release()
 end
 
 function RhythmItem:SetData(config)
+    self.gameObject.name = "Item" .. tostring(config.id)
     if config.type == 1 then
         self.image.color = RhythmItem.ColorRed
     else
