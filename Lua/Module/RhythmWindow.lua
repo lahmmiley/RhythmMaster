@@ -2,6 +2,8 @@ RhythmWindow = RhythmWindow or BaseClass(LPanel)
 local _table_remove = table.remove
 local _table_insert = table.insert
 
+RhythmWindow.InitOffset = 470
+
 function RhythmWindow:__init()
     self.frameUpdate = function() self:OnFrameUpdate() end
     self.state = RhythmDefine.State.prepare
@@ -16,9 +18,12 @@ end
 function RhythmWindow:InitPanel(gameObject)
     local transform = gameObject.transform
     self.pipelineTrans = transform:Find("PipelineBg/Pipeline")
+    self.pipelineWidth = UtilsUI.GetWidth(self.pipelineTrans)
     self.matchTrans = transform:Find("PipelineBg/Match")
     self.rhythmItemPool = ClassPool.New(RhythmItem)
     self.rhythmPointTemplate = transform:Find("RhythmPoint").gameObject
+    self.itemWidth = UtilsUI.GetWidth(self.rhythmPointTemplate.transform)
+    self.clickResultText = UtilsUI.GetText(transform, "ClickResultText")
 
     UtilsUI.AddButtonListener(transform, "RedButton", function() self:RedButtonClick() end)
     UtilsUI.AddButtonListener(transform, "BlueButton", function() self:BlueButtonClick() end)
@@ -43,6 +48,8 @@ function RhythmWindow:OnFrameUpdate()
 end
 
 function RhythmWindow:OnShow()
+    --先创建视野内的节奏点
+    --self:CreateRhythmItem()
 end
 
 function RhythmWindow:Start()
@@ -55,6 +62,7 @@ function RhythmWindow:Start()
 end
 
 function RhythmWindow:PlayMusic()
+    SoundManager:GetInstance():PlayMusic(2)
 end
 
 function RhythmWindow:GetMusicCurrentTime()
@@ -67,9 +75,9 @@ function RhythmWindow:CreateRhythmItem()
     local rhythmConfigList = self.rhythmConfigList
     for i = createdIndex + 1, #rhythmConfigList do
         local config = rhythmConfigList[i]
-        if currentTime >= config.time then
+        local x = config.time * 0.1 + self.pipelineWidth + self.itemWidth / 2
+        if (x + self.pipelineX + self.itemWidth / 2) < self.pipelineWidth then
             local rhythmItem = self.rhythmItemPool:Get(self.rhythmPointTemplate)
-            local x = config.time * 0.1 + 50 -- 后面的数字是初始偏移值
             rhythmItem:SetParent(self.pipelineTrans, Vector3(x, 0, 0))
             rhythmItem:SetData(config)
             _table_insert(self.showRhythmItemList, rhythmItem)
@@ -82,8 +90,7 @@ function RhythmWindow:RecycleRhythmItem()
     local pipelineX = self.pipelineX
     for key, rhythmItem in pairs(self.showRhythmItemList) do
         local x = self:GetRhythmItemX(rhythmItem)
-        print(x)
-        if x < -RhythmItem.ItemWidth then
+        if x < -(self.itemWidth / 2) then
             self.rhythmItemPool:Recycle(rhythmItem)
             self.showRhythmItemList[key] = nil
         end
@@ -95,7 +102,7 @@ function RhythmWindow:GetRhythmItemX(rhythmItem)
 end
 
 function RhythmWindow:Move()
-    self.pipelineX = self.pipelineX - 1
+    self.pipelineX = self.pipelineX - 5
     UtilsUI.SetAnchoredX(self.pipelineTrans, self.pipelineX)
 end
 
@@ -117,13 +124,36 @@ function RhythmWindow:BlueButtonClick()
 end
 
 function RhythmWindow:ClickCheck(clickType)
+    local clickItem
+    local absX
+    local key
     for k, rhythmItem in pairs(self.showRhythmItemList) do
         local x = self:GetRhythmItemX(rhythmItem)
-        --成功点击 差 良 完美
-        --无效点击
-        if 0 < x and x < 64 then
-        else
+        if self.itemWidth / 2 <= x and x <= self.itemWidth * 2.5 then
+            local x = math.abs(self.itemWidth * 1.5 - x)
+            if absX == nil then
+                absX = x
+                clickItem = rhythmItem
+                key = k
+            elseif x < absX then
+                absX = x
+                clickItem = rhythmItem
+                key = k
+            end
         end
+    end
+    if clickItem then
+        if absX < 5 then
+            self.clickResultText.text = "perfect"
+        elseif absX < 10 then
+            self.clickResultText.text = "good"
+        else
+            self.clickResultText.text = "bad"
+        end
+        self.rhythmItemPool:Recycle(clickItem)
+        self.showRhythmItemList[key] = nil
+    else
+        self.clickResultText.text = "无效点击"
     end
 end
 

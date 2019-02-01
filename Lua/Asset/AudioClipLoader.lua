@@ -8,4 +8,7 @@ function AudioClipLoader:GetInstance()
 end
 
 function AudioClipLoader:LoadMusic(id)
+    local config = RhythmConfig.Music[id]
+    local path = AssetType.ToLogicPath(config.name, AssetType.music)
+    return AssetLoader:GetInstance():Load(path)
 end

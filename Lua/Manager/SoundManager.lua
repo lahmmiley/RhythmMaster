@@ -10,13 +10,15 @@ end
 function SoundManager:__init()
     local go = GameObject.Find("AudioSource").gameObject
     self.audioSourceGo = go
-    DontDestroyOnLoad(go)
+    --DontDestroyOnLoad(go)
     self.musicAudioSource = go:GetComponent(AudioSource)
     self.soundAudioSourceList = {}
 end
 
 function SoundManager:PlayMusic(id)
-    -- self.musicAudioSource 
+    local audioClip = AudioClipLoader:GetInstance():LoadMusic(id)
+    self.musicAudioSource.clip = audioClip
+    self.musicAudioSource:Play()
 end
 
 function SoundManager:PlaySound(id)

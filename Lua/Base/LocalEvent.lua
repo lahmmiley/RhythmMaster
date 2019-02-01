@@ -61,5 +61,5 @@ function LocalEvent:Dispatcher(args1, args2, args3, args4, args5)
 end
 
 function LocalEvent.ErrorLog(errinfo)
-    pError("LocalEvent:Dispatcher出错了:\n" .. tostring(errinfo))
+    pError("LocalEvent:Dispatcher出错了:" .. string.LineFeed .. tostring(errinfo))
 end

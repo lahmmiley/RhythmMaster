@@ -26,6 +26,8 @@ AssetType.ToLogicPath = function(path, assetType)
         return string.format("Unit/Vehicle/Skin/%s", path)
     elseif assetType == AssetType.vehicleAnimation then
         return string.format("Unit/Vehicle/Animation/%s", path)
+    elseif assetType == AssetType.music then
+        return string.format("Music/%s", path)
     else
         pError("找不到类型:" .. tostring(assetType))
     end

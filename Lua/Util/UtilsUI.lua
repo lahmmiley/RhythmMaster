@@ -84,9 +84,17 @@ function UtilsUI.GetCanvasGroup(transform, path)
     return transform:Find(path):GetComponent(CanvasGroup)
 end
 
+function UtilsUI.GetWidth(rect)
+    return rect.sizeDelta.x
+end
+
 function UtilsUI.SetWidth(rect, width)
     local sizeDelta = rect.sizeDelta
     rect.sizeDelta = Vector2(width, sizeDelta.y)
+end
+
+function UtilsUI.GetHeight(rect)
+    return rect.sizeDelta.y
 end
 
 function UtilsUI.SetHeight(rect, height)

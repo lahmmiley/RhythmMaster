@@ -2,7 +2,6 @@ RhythmItem = RhythmItem or BaseClass()
 
 RhythmItem.ColorRed = Color(1, 0, 0)
 RhythmItem.ColorBlue = Color(0, 0, 1)
-RhythmItem.ItemWidth = 64
 
 function RhythmItem:__init(template)
     self.gameObject = GameObject.Instantiate(template)

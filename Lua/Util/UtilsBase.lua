@@ -95,10 +95,10 @@ function UtilsBase.Serialize(obj, name, newline, depth, keytab)
 
     if _type(obj) == "table" and keylist[obj] == nil then
             keylist[obj] = true
-            tmp = tmp .. "{" .. (newline and "\n" or "")
+            tmp = tmp .. "{" .. (newline and string.LineFeed or "")
 
             for k, v in _pairs(obj) do
-                tmp =  tmp .. UtilsBase.Serialize(v, k, newline, depth + 1, keylist) .. "," .. (newline and "\n" or "")
+                tmp =  tmp .. UtilsBase.Serialize(v, k, newline, depth + 1, keylist) .. "," .. (newline and string.LineFeed or "")
             end
 
             tmp = tmp .. string.rep(space, depth) .. "}"

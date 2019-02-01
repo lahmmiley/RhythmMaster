@@ -1,15 +1,16 @@
 import("UnityEngine")
 import('UnityEngine.UI')
 
+string.Empty = ""
+string.LineFeed = "\n"
+
 _print = print
 print = function(msg)
-    Debug.LogError(msg .. "\n" .. debug.traceback())
+    Debug.LogError(msg .. string.LineFeed .. debug.traceback())
 end
 pError = function(msg)
-    Debug.LogError(msg .. "\n" .. debug.traceback())
+    Debug.LogError(msg .. string.LineFeed .. debug.traceback())
 end
-
-string.Empty = ""
 
 math.round = function(value)
     return math.floor(value + 0.5)
@@ -77,6 +78,7 @@ Main.LoadLuaClass = function(classPathArray)
 end
 
 function Main()
+    LTimer.realtimeSinceStartup = Time.realtimeSinceStartup * 1000
     PanelManager:GetInstance():Show(PanelId.rhythmWindow)
 end
 
