@@ -1,5 +1,6 @@
 local _table_insert = table.insert
 local _math_ceil = math.ceil
+local _xpcall = xpcall
 
 TimerNode = TimerNode or BaseClass()
 
@@ -109,7 +110,7 @@ function LTimer:Remove(id)
 end
 
 function LTimer:Update(deltaTime)
-    local now = LTimer.realtimeSinceStartup
+    local now = LTimer.realtimeSinceStartup / 10
     for slot, list in pairs(self.slotDict) do
         if now >= slot then
             self.slotDict[slot] = nil
