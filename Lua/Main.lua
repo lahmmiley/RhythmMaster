@@ -79,7 +79,7 @@ end
 
 function Main()
     LTimer.realtimeSinceStartup = Time.realtimeSinceStartup * 1000
-    PanelManager:GetInstance():Show(PanelId.rhythmWindow)
+    PanelManager.GetInstance():Show(PanelId.rhythmWindow)
 end
 
 function Update()

@@ -1,10 +1,10 @@
 PanelManager = PanelManager or BaseClass()
 
-function PanelManager:GetInstance()
-    if self._instance == nil then
-        self._instance = PanelManager.New()
+function PanelManager.GetInstance()
+    if PanelManager._instance == nil then
+        PanelManager._instance = PanelManager.New()
     end
-    return self._instance
+    return PanelManager._instance
 end
 
 function PanelManager:__init()

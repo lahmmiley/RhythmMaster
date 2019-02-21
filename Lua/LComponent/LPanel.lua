@@ -54,7 +54,7 @@ function LPanel:AssetsLoaded(gameObject)
 end
 
 function LPanel:SetParent(gameObject)
-    UtilsUI.PanelSetParent(gameObject.transform, PanelManager:GetInstance():GetUIRoot())
+    UtilsUI.PanelSetParent(gameObject.transform, PanelManager.GetInstance():GetUIRoot())
 end
 
 function LPanel:OnShow()
