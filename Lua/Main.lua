@@ -6,7 +6,7 @@ string.LineFeed = "\n"
 
 _print = print
 print = function(msg)
-    Debug.LogError(msg .. string.LineFeed .. debug.traceback())
+    Debug.Log(msg .. string.LineFeed .. debug.traceback())
 end
 pError = function(msg)
     Debug.LogError(msg .. string.LineFeed .. debug.traceback())
@@ -79,7 +79,27 @@ end
 
 function Main()
     LTimer.realtimeSinceStartup = Time.realtimeSinceStartup * 1000
-    PanelManager.GetInstance():Show(PanelId.rhythmWindow)
+    local count = 0
+        local go = GameObject.Find("Canvas/GameObject")
+        go:SetActive(false)
+        LTimer.GetInstance():Add(0, 2000, function()
+            count = count + 1
+            if count % 4 == 1 then
+                go:SetActive(true)
+                PanelManager.now = Time.realtimeSinceStartup
+                -- Profiling.Profiler:BeginSample("11")
+                PanelManager.T = true
+                PanelManager.GetInstance():Show(PanelId.rhythmWindow)
+            elseif count % 4 == 3 then
+                go:SetActive(true)
+                PanelManager.now = Time.realtimeSinceStartup
+                PanelManager.T = false
+                PanelManager.GetInstance():Show(PanelId.rhythmWindow)
+            else
+                go:SetActive(false)
+                PanelManager.GetInstance():Hide(PanelId.rhythmWindow)
+            end
+        end)
 end
 
 function Update()
@@ -89,10 +109,12 @@ function Update()
 
     if Input.GetKeyDown(KeyCode.W) and Input.GetKey(KeyCode.LeftControl) then
         print("W")
+
     end
 
     if Input.GetKeyDown(KeyCode.E) and Input.GetKey(KeyCode.LeftControl) then
         print("E")
+        PanelManager.GetInstance():Hide(PanelId.rhythmWindow)
     end
     local deltaTime = Time.deltaTime
     LTimer.realtimeSinceStartup = Time.realtimeSinceStartup * 1000

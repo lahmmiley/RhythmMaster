@@ -41,13 +41,12 @@ end
 
 function PanelManager:Show(id)
     local config = PanelConfig.Data[id]
-    local panel
     if self.panelDict[id] == nil then
         local className = config.className
-        panel = _G[className].New(id)
-    else
-        panel = self.panelDict[id]
+        local panel = _G[className].New(id)
+        self.panelDict[id] = panel
     end
+    local panel = self.panelDict[id]
     if config.window then
         if self.currentWindow ~= nil then
             self.currentWindow:Hide()
@@ -63,13 +62,15 @@ function PanelManager:Hide(id)
         return
     end
     local panel = self.panelDict[id]
-    panel:Hide()
-    local config = panel.config
-    if config.window and self.lastWindow then
-        self.lastWindow:Show()
-        self.currentWindow = self.lastWindow
-        self.lastWindow = nil
-    end
+    -- panel:Hide()
+    panel:Release()
+    self.panelDict[id] = nil
+    -- local config = panel.config
+    -- if config.window and self.lastWindow then
+    --     self.lastWindow:Show()
+    --     self.currentWindow = self.lastWindow
+    --     self.lastWindow = nil
+    -- end
 end
 
 function PanelManager:GetUIRoot()

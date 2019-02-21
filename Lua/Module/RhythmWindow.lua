@@ -12,23 +12,75 @@ function RhythmWindow:__init()
 end
 
 function RhythmWindow:__release()
+    self:DestroyGameObject("gameObject")
     self:ReleaseField("rhythmItemPool")
 end
 
 function RhythmWindow:InitPanel(gameObject)
-    local transform = gameObject.transform
-    self.pipelineTrans = transform:Find("PipelineBg/Pipeline")
-    self.pipelineWidth = UtilsUI.GetWidth(self.pipelineTrans)
-    self.matchTrans = transform:Find("PipelineBg/Match")
-    self.rhythmItemPool = ClassPool.New(RhythmItem)
-    self.rhythmPointTemplate = transform:Find("RhythmPoint").gameObject
-    self.itemWidth = UtilsUI.GetWidth(self.rhythmPointTemplate.transform)
-    self.clickResultText = UtilsUI.GetText(transform, "ClickResultText")
+    self.gameObject = gameObject
+    local fun = function()
+        local transform = gameObject.transform
+        local count = 10000
+        if PanelManager.T == true then
+            local b = count * 4
+            for i = 1, b do
+                local a = transform:Find("PipelineBg/Pipeline")
+            end
+        end
+        self.pipelineTrans = transform:Find("PipelineBg/Pipeline")
+        self.pipelineWidth = UtilsUI.GetWidth(self.pipelineTrans)
+        self.matchTrans = transform:Find("PipelineBg/Match")
+        self.rhythmItemPool = ClassPool.New(RhythmItem)
+        self.rhythmPointTemplate = transform:Find("RhythmPoint").gameObject
+        self.itemWidth = UtilsUI.GetWidth(self.rhythmPointTemplate.transform)
+        self.clickResultText = UtilsUI.GetText(transform, "ClickResultText")
 
-    UtilsUI.AddButtonListener(transform, "RedButton", function() self:RedButtonClick() end)
-    UtilsUI.AddButtonListener(transform, "BlueButton", function() self:BlueButtonClick() end)
-    self.startButtonGo = transform:Find("StartButton").gameObject
-    UtilsUI.AddButtonListener(transform, "StartButton", function() self:StartButtonClick() end)
+        UtilsUI.AddButtonListener(transform, "RedButton", function() self:RedButtonClick() end)
+        UtilsUI.AddButtonListener(transform, "BlueButton", function() self:BlueButtonClick() end)
+        self.startButtonGo = transform:Find("StartButton").gameObject
+        UtilsUI.AddButtonListener(transform, "StartButton", function() self:StartButtonClick() end)
+
+        
+        if PanelManager.T == false then
+            for i = 1, count do
+                local a = transform:Find("PipelineBg/Pipeline")
+            end
+        end
+        transform:Find("PipelineBg").gameObject:SetActive(true)
+        transform:Find("ClickResultText").gameObject:SetActive(true)
+        if PanelManager.T == false then
+            coroutine.yield()
+            for i = 1, count do
+                local a = transform:Find("PipelineBg/Pipeline")
+            end
+        end
+        transform:Find("RedButton").gameObject:SetActive(true)
+        if PanelManager.T == false then
+            coroutine.yield()
+            for i = 1, count do
+                local a = transform:Find("PipelineBg/Pipeline")
+            end
+        end
+        transform:Find("BlueButton").gameObject:SetActive(true)
+        if PanelManager.T == false then
+            coroutine.yield()
+            for i = 1, count do
+                local a = transform:Find("PipelineBg/Pipeline")
+            end
+        end
+        transform:Find("StartButton").gameObject:SetActive(true)
+        self.co = nil
+        local a
+        if PanelManager.T then
+            a = "同步"
+        else
+            a = "分帧"
+        end
+        print(a .. (Time.realtimeSinceStartup - PanelManager.now))
+    end
+
+    local co = coroutine.create(fun)
+    self.co = co
 end
 
 function RhythmWindow:AddListener()
@@ -38,6 +90,9 @@ function RhythmWindow:RemoveListener()
 end
 
 function RhythmWindow:OnFrameUpdate()
+    if self.co then
+        coroutine.resume(self.co)
+    end
     if self.state ~= RhythmDefine.State.playing then
         return
     end

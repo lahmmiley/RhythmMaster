@@ -66,8 +66,8 @@ function LPanel:Hide()
         return
     end
     self:_RemoveListener()
-    self.gameObject:SetActive(false)
-    self.releaseTime = os.time() + 30
+    -- self.gameObject:SetActive(false)
+    -- self.releaseTime = os.time() + 30
 end
 
 function LPanel:OnHide()
