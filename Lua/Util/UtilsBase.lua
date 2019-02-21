@@ -48,7 +48,7 @@ function UtilsBase.CancelTween(object, name)
         pError("CancelTween 传入参数不为字符串")
     end
     if object[name] ~= nil then
-        Tween:GetInstance():Cancel(object[name])
+        Tween.GetInstance():Cancel(object[name])
         object[name] = nil
     end
 end
@@ -59,7 +59,7 @@ function UtilsBase.CancelTweenIdList(object, name)
     end
     if object[name] then
         for _, tweenId in _pairs(object[name]) do
-            Tween:GetInstance():Cancel(tweenId)
+            Tween.GetInstance():Cancel(tweenId)
         end
         object[name] = nil
     end

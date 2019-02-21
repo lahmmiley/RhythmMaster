@@ -1,10 +1,10 @@
 AssetLoader = AssetLoader or BaseClass()
 
-function AssetLoader:GetInstance()
-    if self._instance == nil then
-        self._instance = AssetLoader.New()
+function AssetLoader.GetInstance()
+    if AssetLoader._instance == nil then
+        AssetLoader._instance = AssetLoader.New()
     end
-    return self._instance
+    return AssetLoader._instance
 end
 
 function AssetLoader:__init()

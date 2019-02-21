@@ -1,6 +1,6 @@
 SoundManager = SoundManager or BaseClass()
 
-function SoundManager:GetInstance()
+function SoundManager.GetInstance()
     if self._instance == nil then
         self._instance = SoundManager.New()
     end
@@ -16,7 +16,7 @@ function SoundManager:__init()
 end
 
 function SoundManager:PlayMusic(id)
-    local audioClip = AudioClipLoader:GetInstance():LoadMusic(id)
+    local audioClip = AudioClipLoader.GetInstance():LoadMusic(id)
     self.musicAudioSource.clip = audioClip
     self.musicAudioSource:Play()
 end

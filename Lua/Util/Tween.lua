@@ -63,7 +63,7 @@ Tween = Tween or BaseClass()
 
 local LuaLeanTween = LeanTween
 
-function Tween:GetInstance()
+function Tween.GetInstance()
     if self._instance == nil then
         self._instance = Tween.New()
     end

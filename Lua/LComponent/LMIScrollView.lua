@@ -120,7 +120,7 @@ function LMIScrollView:Focus(index, tweenMove)
         targetY = maxY
     end
     if tweenMove then
-        self.focusTweenId = Tween:GetInstance():MoveLocalY(self.contentTrans.gameObject, targetY, 0.3, function()
+        self.focusTweenId = Tween.GetInstance():MoveLocalY(self.contentTrans.gameObject, targetY, 0.3, function()
             self.focusTweenId = nil
         end).id
     else

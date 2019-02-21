@@ -1,17 +1,17 @@
 UIPrefabLoader = UIPrefabLoader or BaseClass()
 
-function UIPrefabLoader:GetInstance()
-    if self._instance == nil then
-        self._instance = UIPrefabLoader.New()
+function UIPrefabLoader.GetInstance()
+    if UIPrefabLoader._instance == nil then
+        UIPrefabLoader._instance = UIPrefabLoader.New()
     end
-    return self._instance
+    return UIPrefabLoader._instance
 end
 
 function UIPrefabLoader:__init()
 end
 
 function UIPrefabLoader:Load(path)
-    local prefab = AssetLoader:GetInstance():Load(AssetType.ToLogicPath(path, AssetType.uiPrefab))
+    local prefab = AssetLoader.GetInstance():Load(AssetType.ToLogicPath(path, AssetType.uiPrefab))
     local go = GameObject.Instantiate(prefab)
     return go
 end

@@ -27,7 +27,7 @@ function LPanel:Show(args)
     self.args = args
     if self.loadState == LPanel.State.notLoad then
         local assetList = config.assetList
-        local gameObject = UIPrefabLoader:GetInstance():Load(assetList[1].path)
+        local gameObject = UIPrefabLoader.GetInstance():Load(assetList[1].path)
 
         self:AssetsLoaded(gameObject)
     else

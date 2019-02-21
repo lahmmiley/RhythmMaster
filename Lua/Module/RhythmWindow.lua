@@ -62,7 +62,7 @@ function RhythmWindow:Start()
 end
 
 function RhythmWindow:PlayMusic()
-    SoundManager:GetInstance():PlayMusic(2)
+    SoundManager.GetInstance():PlayMusic(2)
 end
 
 function RhythmWindow:GetMusicCurrentTime()

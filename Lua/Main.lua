@@ -97,7 +97,7 @@ function Update()
     local deltaTime = Time.deltaTime
     LTimer.realtimeSinceStartup = Time.realtimeSinceStartup * 1000
     -- print(LTimer.realtimeSinceStartup)
-    LTimer:GetInstance():Update(deltaTime)
+    LTimer.GetInstance():Update(deltaTime)
     GlobalEvent.frameUpdate:Dispatcher()
 end
 

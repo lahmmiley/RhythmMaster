@@ -56,11 +56,11 @@ end
 
 LTimer = LTimer or BaseClass()
 
-function LTimer:GetInstance()
-    if self._instance == nil then
-        self._instance = LTimer.New()
+function LTimer.GetInstance()
+    if LTimer._instance == nil then
+        LTimer._instance = LTimer.New()
     end
-    return self._instance
+    return LTimer._instance
 end
 
 function LTimer:__init()

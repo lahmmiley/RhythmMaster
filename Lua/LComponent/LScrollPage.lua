@@ -199,9 +199,9 @@ end
 -- private function
 function LScrollPage:_TweenMove(page)
     if self:_PageHorizontalLayout() then
-        self.tweenId = Tween:GetInstance():MoveLocalX(self.contentTrans.gameObject, self:_GetTargetPosition(page).x, 0.3).id
+        self.tweenId = Tween.GetInstance():MoveLocalX(self.contentTrans.gameObject, self:_GetTargetPosition(page).x, 0.3).id
     else
-        self.tweenId = Tween:GetInstance():MoveLocalY(self.contentTrans.gameObject, self:_GetTargetPosition(page).y, 0.3).id
+        self.tweenId = Tween.GetInstance():MoveLocalY(self.contentTrans.gameObject, self:_GetTargetPosition(page).y, 0.3).id
     end
 end
 
